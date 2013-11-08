@@ -1,0 +1,11 @@
+*~
+*.idea/
+.idea/
+/.sass-cache/
+node_modules/
+bower_components/
+dist/
+/tmp/
+.DS_Store
+*.log
+.grunt
