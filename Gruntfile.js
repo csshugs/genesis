@@ -17,6 +17,10 @@ module.exports = function(grunt) {
                 files: ['app/assets/js/**/*.js'],
                 tasks: 'js'
             },
+            img: {
+                files: ['app/assets/img/**/*.*'],
+                tasks: 'img'
+            },
             livereload: {
                 options: {
                     livereload: true,
@@ -88,6 +92,11 @@ module.exports = function(grunt) {
                 files: [
                     { expand: true, cwd: './app/assets/js', src: ['./**/*.*'], dest: 'dist/assets/js' }
                 ]
+            },
+            img: {
+                files: [
+                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' }
+                ]
             }
         },
 
@@ -122,6 +131,9 @@ module.exports = function(grunt) {
     ]);
     grunt.registerTask('js', [
         'copy:js'
+    ]);
+    grunt.registerTask('img', [
+        'copy:img'
     ]);
 
 };
