@@ -9,4 +9,4 @@
 ###Prerequisities
 
 - [Chrome Canary] (https://www.google.com/intl/de/chrome/browser/canary.html)
-- Install the Sass pre-release version with `gem install sass -v '>=3.3.0alpha' --pre`
+- Just works with the Sass pre-release version. Install it with `gem install sass -v '>=3.3.0alpha' --pre`
