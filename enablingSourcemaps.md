@@ -8,5 +8,5 @@
 
 ###Prerequisities
 
-- Chrome Canary
+- [Chrome Canary] (https://www.google.com/intl/de/chrome/browser/canary.html)
 - [Sass pre-release version installed] (https://developers.google.com/chrome-developer-tools/docs/css-preprocessors#toc-using-css-source-maps)
