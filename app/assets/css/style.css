@@ -16,7 +16,7 @@
     VARS.SCSS
 \*------------------------------------*/
 /**
- * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * Any variables you find set in inuit.cssÔÇÖ `_vars.scss` that you do not wish to
  * keep, simply redefine here. This means that if inuit.css, for example, sets
  * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
  * that variable in this file. inuit.css ignores its own variables in favour of
@@ -27,7 +27,7 @@
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
 /**
- * All of inuit.css’ objects and abstractions are initially turned off by
+ * All of inuit.cssÔÇÖ objects and abstractions are initially turned off by
  * default. This means that you start any project with as little as possible,
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
@@ -36,7 +36,7 @@
     $OVERRIDES
 \*------------------------------------*/
 /**
- * Place any variables that should override inuit.css’ defaults here.
+ * Place any variables that should override inuit.cssÔÇÖ defaults here.
  */
 /*------------------------------------*\
     $CUSTOM
@@ -98,7 +98,7 @@
     $CONTENTS
 \*------------------------------------*/
 /**
- * CONTENTS............You’re reading it!
+ * CONTENTS............YouÔÇÖre reading it!
  * WARNING.............Here be dragons!
  * IMPORTS.............Begin importing the sections below
  *
@@ -176,7 +176,7 @@
     $DEFAULTS
 \*------------------------------------*/
 /**
- * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
+ * inuit.cssÔÇÖ default variables. Redefine these in your `_vars.scss` file (found
  * in the inuit.css-web-template) to override them.
  */
 /*------------------------------------*\
@@ -203,7 +203,7 @@
  * Base font-family.
  */
 /**
- * Default colour for objects’ borders etc.
+ * Default colour for objectsÔÇÖ borders etc.
  */
 /*------------------------------------*\
     $RESPONSIVE
@@ -241,7 +241,7 @@
  * English quote marks?
  */
 /**
- * If you want English quotes then please do not edit these; they’re only here
+ * If you want English quotes then please do not edit these; theyÔÇÖre only here
  * because Sass needs them.
  */
 /**
@@ -360,11 +360,11 @@
 /**
  * Media query mixin.
  *
- * It’s not great practice to define solid breakpoints up-front, preferring to
- * modify your design when it needs it, rather than assuming you’ll want a
- * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * ItÔÇÖs not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming youÔÇÖll want a
+ * change at ÔÇÿmobileÔÇÖ. However, as inuit.css is required to take a hands off
  * approach to design decisions, this is the closest we can get to baked-in
- * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * responsiveness. ItÔÇÖs flexible enough to allow you to set your own breakpoints
  * but solid enough to be frameworkified.
  *
  * We define some broad breakpoints in our vars file that are picked up here
@@ -760,7 +760,7 @@ table {
  * As per: csswizardry.com/2011/10/reset-restarted
  */
 /**
-* Let’s make the box model all nice, shall we...?
+* LetÔÇÖs make the box model all nice, shall we...?
 */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -805,7 +805,7 @@ ins {
 }
 
 /**
- * So that `alt` text is visually offset if images don’t load.
+ * So that `alt` text is visually offset if images donÔÇÖt load.
  */
 img {
   font-style: italic;
@@ -1102,7 +1102,7 @@ blockquote q:after {
  */
 blockquote {
   /**
-   * .4em is roughly equal to the width of the opening “ that we wish to hang.
+   * .4em is roughly equal to the width of the opening ÔÇ£ that we wish to hang.
    */
   text-indent: -0.41em;
 }
@@ -1167,7 +1167,7 @@ pre mark {
  *
  * 1. Make the list look like code.
  * 2. Give the list flush numbers with a leading zero.
- * 3. Make sure lines of code don’t wrap.
+ * 3. Make sure lines of code donÔÇÖt wrap.
  * 4. Give the code form by forcing the `code` to honour white-space.
  */
 .line-numbers {
@@ -1681,7 +1681,7 @@ label,
    <small class=extra-help>.edu emails only</small>
  *
  * We leave the help text in the document flow and merely set it to
- * `visibility:hidden;`. This means that it won’t interfere with anything once
+ * `visibility:hidden;`. This means that it wonÔÇÖt interfere with anything once
  * it reappears.
  *
  */
@@ -1837,15 +1837,15 @@ label,
 }
 
 /**
- * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
- * access to these classes. You can define at which breakpoint you’d like an
+ * If you have set `$responsive` to ÔÇÿtrueÔÇÖ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint youÔÇÖd like an
  * element to be a certain size, e.g.:
  *
  * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
  *
- * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
- * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
- * at ‘mobile’ sizes.
+ * This would create a `div` that, at ÔÇÿdesktopÔÇÖ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ÔÇÿtabletÔÇÖ sizes, and goes full width
+ * at ÔÇÿmobileÔÇÖ sizes.
  *
  * Demo: jsfiddle.net/inuitcss/WS4Ge
  *
@@ -2471,7 +2471,7 @@ label,
   }
 }
 /**
- * If you have set the additional `$responsive-extra` variable to ‘true’ in
+ * If you have set the additional `$responsive-extra` variable to ÔÇÿtrueÔÇÖ in
  * `_vars.scss` then you now have access to the following class available to
  * accomodate much larger screen resolutions.
  */
@@ -2514,7 +2514,7 @@ label,
 \*------------------------------------*/
 /**
  * A series of helper classes to use arbitrarily. Only use a helper class if an
- * element/component doesn’t already have a class to which you could apply this
+ * element/component doesnÔÇÖt already have a class to which you could apply this
  * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
  * that ruleset as opposed to adding the `.float--left` class to the markup.
  *
@@ -2911,3 +2911,5 @@ label,
 /**
  * Here we put the hacky, nasty stuff and hopefully repair it later.
  */
+
+/*# sourceMappingURL=style.css.map */

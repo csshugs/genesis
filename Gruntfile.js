@@ -6,15 +6,15 @@ module.exports = function(grunt) {
 
         watch: {
             scss: {
-                files: ['css/**/*.scss'],
+                files: ['app/assets/css/**/*.scss'],
                 tasks: 'scss'
             },
             html: {
-                files: ['src/**/*.hbs'],
+                files: ['app/templates/**/*.hbs'],
                 tasks: 'html'
             },
             js: {
-                files: ['js/**/*.js'],
+                files: ['app/assets/js/**/*.js'],
                 tasks: 'js'
             },
             livereload: {
@@ -33,14 +33,14 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
-                    /*sourcemap: true*/
+                    style: 'expanded',
+                    sourcemap: true
                 },    
                 files: [{
                     expand: true,
-                    cwd: 'css',
+                    cwd: 'app/assets/css',
                     src: ['style.scss'],
-                    dest: 'css',
+                    dest: 'app/assets/css',
                     ext: '.css'
                 }]
             }
@@ -66,36 +66,27 @@ module.exports = function(grunt) {
         assemble: {
             options: {
                 flatten: true,
-                layout: 'layout.hbs',
-                layoutdir: 'src/templates/layouts',
+                layout: 'default.hbs',
+                layoutdir: 'app/templates/layouts',
                 assets: 'dist/assets',
-                partials: ['src/templates/pages/*.hbs', 'src/templates/parts/*.hbs']
+                partials: ['app/templates/pages/*.hbs', 'app/templates/parts/*.hbs']
             },
-            demo: {
-                options: {
-                    data: ['src/data/*.{json,yml}']
-                },
+            generate: {
                 files: {
-                    'dist/': ['src/templates/pages/*.hbs']
+                    'dist/': ['app/templates/pages/*.hbs']
                 }
             }
         },
 
         copy: {
-            demo: {
-                files: [
-                    { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' },
-                    { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
-                ]
-            },
             css: {
                 files: [
-                    { expand: true, cwd: './css', src: ['./**/*.*'], dest: 'dist/assets/css' }
+                    { expand: true, cwd: './app/assets/css', src: ['./**/*.*'], dest: 'dist/assets/css' }
                 ]
             },
             js: {
                 files: [
-                    { expand: true, cwd: './js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+                    { expand: true, cwd: './app/assets/js', src: ['./**/*.*'], dest: 'dist/assets/js' }
                 ]
             }
         },
