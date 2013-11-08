@@ -9,4 +9,4 @@
 ###Prerequisities
 
 - [Chrome Canary] (https://www.google.com/intl/de/chrome/browser/canary.html)
-- [Sass pre-release version installed] (https://developers.google.com/chrome-developer-tools/docs/css-preprocessors#toc-using-css-source-maps)
+- Install the Sass pre-release version with `gem install sass -v '>=3.3.0alpha' --pre`
