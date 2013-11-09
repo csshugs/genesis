@@ -15,3 +15,10 @@ There are four different grunt tasks available:
 - `grunt` does exactly the same as above but doesn't open a new broser tab, so that when you have the site open already, executing another task and then want to continue developing, you just can go on without closing a redundant browser tab.
 - `grunt deploy` compiles compressed css, throws the needless scss files out of the dist folder and concatenates all js files into one.
 - `grunt shot` creates a **test** folder in which it throws some screenshots of the site in diffenrent viewport sizes. These can be adjusted in the Gruntfile.
+
+###Troubleshooting
+
+In case you get a sourcemap-error, try installing the Sass pre-release version with `gem install sass -v '>=3.3.0alpha' --pre`.
+
+Alternatively you can just delete this line out of the Gruntfile.js:
+`sourcemap: true`
