@@ -18,7 +18,7 @@ module.exports = function(grunt) {
                 tasks: 'js'
             },
             img: {
-                files: ['app/assets/img/**/*.*'],
+                files: ['app/assets/img/**/{.*,*,*/*}'],
                 tasks: 'img'
             },
             livereload: {
@@ -135,7 +135,8 @@ module.exports = function(grunt) {
             predeploy: {
                 files: [
                     { expand: true, cwd: './app/assets/css', src: ['./**/*.css'], dest: 'dist/assets/css' },
-                    { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'dist/assets/js' }
+                    { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'dist/assets/js' },
+                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' }
                 ]
             },
             css: {
