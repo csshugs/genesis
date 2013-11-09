@@ -52,7 +52,7 @@ module.exports = function(grunt) {
             compressed: {
                 options: {
                     style: 'compressed'
-                },    
+                },
                 files: [{
                     expand: true,
                     cwd: 'app/assets/css',
@@ -173,8 +173,8 @@ module.exports = function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     grunt.loadNpmTasks('assemble');
 
-    // Default task(s).
-    grunt.registerTask('default', [
+    // Initial dev task, opens the site in the browser.
+    grunt.registerTask('init', [
         'clean',
         'copy:css',
         'copy:js',
@@ -186,7 +186,19 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('pre-deploy', [
+    // Default dev task without open.
+    grunt.registerTask('default', [
+        'clean',
+        'copy:css',
+        'copy:js',
+        'copy:img',
+        'assemble',
+        'concurrent:dev',
+        'connect',
+        'watch'
+    ]);
+
+    grunt.registerTask('deploy', [
         'clean',
         'sass:compressed',
         'copy:predeploy',
