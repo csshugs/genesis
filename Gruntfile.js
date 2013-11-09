@@ -157,7 +157,35 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: ['./app/assets/js/app/main.js', './app/assets/js/plugins/plugins.js', './app/assets/js/vendor/*.js'],
-                dest: 'dist/assets/js/built.js',
+                dest: 'dist/assets/js/script.js',
+            },
+        },
+
+        autoshot: {
+            default_options: {
+                options: {
+                    path: './test/screenshots',
+                    remote: {
+                        files: [
+                            { src: "", dest: "" }
+                        ]
+                    },
+                    local: {
+                        path: './dist',
+                        port: 8000,
+                        files: [
+                            { src: "index.html", dest: "screenshot.jpg" }
+                        ]
+                    },
+                    viewport: [
+                        '1920x1080',
+                        '1200x800',
+                        '1024x768',
+                        '800x600',
+                        '768x1024',
+                        '480x800'
+                    ]
+                },
             },
         },
 
@@ -176,7 +204,7 @@ module.exports = function(grunt) {
 
     // Initial dev task, opens the site in the browser.
     grunt.registerTask('init', [
-        'clean',
+        'clean:build',
         'copy:css',
         'copy:js',
         'copy:img',
@@ -189,7 +217,7 @@ module.exports = function(grunt) {
 
     // Default dev task without open.
     grunt.registerTask('default', [
-        'clean',
+        'clean:build',
         'copy:css',
         'copy:js',
         'copy:img',
@@ -199,14 +227,27 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
+    // Deploy task, compressing the css and concatenating the js files
     grunt.registerTask('deploy', [
-        'clean',
+        'clean:build',
         'sass:compressed',
         'copy:predeploy',
         'sass:dist',
         'assemble',
         'concat',
         'clean:inuit'
+    ]);
+
+    // Autoshot task, taking screenshots of the various screensizes
+    grunt.registerTask('shot', [
+        'clean:build',
+        'sass:compressed',
+        'copy:predeploy',
+        'sass:dist',
+        'assemble',
+        'concat',
+        'clean:inuit',
+        'autoshot'
     ]);
 
     grunt.registerTask('scss', [
