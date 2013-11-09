@@ -29,7 +29,8 @@ module.exports = function(grunt) {
                 files: [
                     'dist/**/*.html',
                     'dist/assets/css/{,*/}*.css',
-                    'dist/assets/js/{,*/}*.js'
+                    'dist/assets/js/{,*/}*.js',
+                    'dist/assets/img/{,*/}*.*'
                 ]
             }
         },
@@ -148,6 +149,7 @@ module.exports = function(grunt) {
 
     // Default task(s).
     grunt.registerTask('default', [
+        'clean',
         'copy',
         'assemble',
         'concurrent:dev',
