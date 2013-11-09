@@ -20,5 +20,7 @@ There are four different grunt tasks available:
 
 In case you get a sourcemap-error, try installing the Sass pre-release version with `gem install sass -v '>=3.3.0alpha' --pre`.
 
-Alternatively you can just delete this line out of the Gruntfile.js:
-`sourcemap: true`
+Alternatively you can just delete this line out of the Gruntfile.js in the sass section:
+`
+sourcemap: true
+`
