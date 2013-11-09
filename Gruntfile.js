@@ -172,6 +172,7 @@ module.exports = function(grunt) {
     // Load the plugins.
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-autoshot');
 
     // Initial dev task, opens the site in the browser.
     grunt.registerTask('init', [
