@@ -12,3 +12,6 @@ The entire development-code is stored in the **app** folder. When grunt detects 
 
 There are four different grunt tasks available:
 - `grunt init` for the development. It watches your files for changes and reloads the site automatically.
+- `grunt` does exactly the same as above but doesn't open a new broser tab, so that when you have the site open already, executing another task and then want to continue developing, you just can go on without closing a redundant browser tab.
+- `grunt deploy` compiles compressed css, throws the needless scss files out of the dist folder and concatenates all js files into one.
+- `grunt shot` creates a **test** folder in which it throws some screenshots of the site in diffenrent viewport sizes. These can be adjusted in the Gruntfile.
