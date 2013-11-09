@@ -89,10 +89,13 @@ module.exports = function(grunt) {
                 assets: 'dist/assets',
                 partials: ['app/templates/pages/*.hbs', 'app/templates/parts/*.hbs']
             },
-            generate: {
-                files: {
-                    'dist/': ['app/templates/pages/*.hbs']
-                }
+            dev: {
+                options: {layout: 'default.hbs' },
+                files: {'dist/': ['app/templates/pages/*.hbs' ]},
+            },
+            deploy: {
+                options: {layout: 'default--deploy.hbs' },
+                files: {'dist/': ['app/templates/pages/*.hbs' ]},
             }
         },
 
@@ -131,7 +134,8 @@ module.exports = function(grunt) {
         copy: {
             predeploy: {
                 files: [
-                    { expand: true, cwd: './app/assets/css', src: ['./**/*.css'], dest: 'dist/assets/css' }
+                    { expand: true, cwd: './app/assets/css', src: ['./**/*.css'], dest: 'dist/assets/css' },
+                    { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'dist/assets/js' }
                 ]
             },
             css: {
@@ -156,7 +160,7 @@ module.exports = function(grunt) {
                 separator: ' ',
             },
             dist: {
-                src: ['./app/assets/js/app/main.js', './app/assets/js/plugins/plugins.js', './app/assets/js/vendor/*.js'],
+                src: ['./app/assets/js/plugins/plugins.js', './app/assets/js/app/main.js'],
                 dest: 'dist/assets/js/script.js',
             },
         },
@@ -208,7 +212,7 @@ module.exports = function(grunt) {
         'copy:css',
         'copy:js',
         'copy:img',
-        'assemble',
+        'assemble:dev',
         'concurrent:dev',
         'connect',
         'open',
@@ -221,7 +225,7 @@ module.exports = function(grunt) {
         'copy:css',
         'copy:js',
         'copy:img',
-        'assemble',
+        'assemble:dev',
         'concurrent:dev',
         'connect',
         'watch'
@@ -233,7 +237,7 @@ module.exports = function(grunt) {
         'sass:compressed',
         'copy:predeploy',
         'sass:dist',
-        'assemble',
+        'assemble:deploy',
         'concat',
         'clean:inuit'
     ]);
@@ -244,7 +248,7 @@ module.exports = function(grunt) {
         'sass:compressed',
         'copy:predeploy',
         'sass:dist',
-        'assemble',
+        'assemble:deploy',
         'concat',
         'clean:inuit',
         'autoshot'
@@ -255,7 +259,7 @@ module.exports = function(grunt) {
         'copy:css'
     ]);
     grunt.registerTask('html', [
-        'assemble'
+        'assemble:dev'
     ]);
     grunt.registerTask('js', [
         'copy:js'
