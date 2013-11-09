@@ -48,11 +48,24 @@ module.exports = function(grunt) {
                     dest: 'app/assets/css',
                     ext: '.css'
                 }]
+            },
+            compressed: {
+                options: {
+                    style: 'compressed'
+                },    
+                files: [{
+                    expand: true,
+                    cwd: 'app/assets/css',
+                    src: ['style.scss'],
+                    dest: 'app/assets/css',
+                    ext: '.css'
+                }]
             }
         },
 
         connect: {
             server: {
+
                 options: {
                     port: 8000,
                     // change this to '0.0.0.0' or '*' to access the server from outside
@@ -109,6 +122,9 @@ module.exports = function(grunt) {
         clean: {
             build: {
                 src: ["./dist"]
+            },
+            inuit: {
+                src: ["./dist/assets/css/inuit.css/"]
             }
         },
 
@@ -135,6 +151,16 @@ module.exports = function(grunt) {
             }
         },
 
+        concat: {
+            options: {
+                separator: ' ',
+            },
+            dist: {
+                src: ['./app/assets/js/app/main.js', './app/assets/js/plugins/plugins.js', './app/assets/js/vendor/*.js'],
+                dest: 'dist/assets/js/built.js',
+            },
+        },
+
         concurrent: {
             dev: [
                 'sass'
@@ -150,7 +176,9 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('default', [
         'clean',
-        'copy',
+        'copy:css',
+        'copy:js',
+        'copy:img',
         'assemble',
         'concurrent:dev',
         'connect',
@@ -160,13 +188,16 @@ module.exports = function(grunt) {
 
     grunt.registerTask('pre-deploy', [
         'clean',
+        'sass:compressed',
         'copy:predeploy',
+        'sass:dist',
         'assemble',
-        'concurrent:dev'
+        'concat',
+        'clean:inuit'
     ]);
 
     grunt.registerTask('scss', [
-        'sass',
+        'sass:dist',
         'copy:css'
     ]);
     grunt.registerTask('html', [
