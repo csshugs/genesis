@@ -99,29 +99,6 @@ module.exports = function(grunt) {
             }
         },
 
-        copy: {
-            predeploy: {
-                files: [
-                    { expand: true, cwd: './app/assets/css', src: ['./**/*.css'], dest: 'dist/assets/css' }
-                ]
-            },
-            css: {
-                files: [
-                    { expand: true, cwd: './app/assets/css', src: ['./**/*.*'], dest: 'dist/assets/css' }
-                ]
-            },
-            js: {
-                files: [
-                    { expand: true, cwd: './app/assets/js', src: ['./**/*.*'], dest: 'dist/assets/js' }
-                ]
-            },
-            img: {
-                files: [
-                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' }
-                ]
-            }
-        },
-
         clean: {
             build: {
                 src: ["./dist"]
