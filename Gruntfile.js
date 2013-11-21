@@ -181,6 +181,15 @@ module.exports = function(grunt) {
             dev: [
                 'sass'
             ]
+        },
+
+        sprite:{
+            all: {
+                src: 'app/assets/img/css/sprites/*.png',
+                destImg: 'app/assets/img/css/sprites/sprite.png',
+                destCSS: 'app/assets/css/ui/base/_sprites.scss',
+                cssFormat: 'scss'
+            }
         }
 
     });
