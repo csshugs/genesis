@@ -113,7 +113,8 @@ module.exports = function(grunt) {
                 files: [
                     { expand: true, cwd: './app/assets/css', src: ['./**/*.css'], dest: 'dist/assets/css' },
                     { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'dist/assets/js' },
-                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' }
+                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' },
+                    { expand: true, cwd: './app/assets/fonts', src: ['./**/*.*'], dest: 'dist/assets/fonts' }
                 ]
             },
             css: {
@@ -129,6 +130,11 @@ module.exports = function(grunt) {
             img: {
                 files: [
                     { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' }
+                ]
+            },
+            fonts: {
+                files: [
+                    { expand: true, cwd: './app/assets/fonts', src: ['./**/*.*'], dest: 'dist/assets/fonts' }
                 ]
             }
         },
@@ -190,6 +196,7 @@ module.exports = function(grunt) {
         'copy:css',
         'copy:js',
         'copy:img',
+        'copy:fonts',
         'assemble:dev',
         'concurrent:dev',
         'connect',
@@ -203,6 +210,7 @@ module.exports = function(grunt) {
         'copy:css',
         'copy:js',
         'copy:img',
+        'copy:fonts',
         'assemble:dev',
         'concurrent:dev',
         'connect',
