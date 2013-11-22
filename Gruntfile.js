@@ -185,10 +185,16 @@ module.exports = function(grunt) {
 
         sprite:{
             all: {
-                src: 'app/assets/img/css/sprites/*.png',
-                destImg: 'app/assets/img/css/sprites/sprite.png',
+                src: 'app/assets/img/css/sprites/src/*.png',
+                destImg: 'app/assets/img/css/sprites/s.png',
                 destCSS: 'app/assets/css/ui/base/_sprites.scss',
-                cssFormat: 'scss'
+                imgPath: '../../assets/img/css/sprites/s.png',
+                cssFormat: 'scss',
+                cssOpts: {
+                    cssClass: function (item) {
+                      return '.s--' + item.name;
+                    }
+              }
             }
         }
 
