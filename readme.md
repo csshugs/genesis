@@ -11,17 +11,17 @@ The entire development-code is stored in the **app** folder. When grunt detects 
 
 ###Tasks
 
-There are four different grunt tasks available:
+There are five different grunt tasks available:
 - `grunt init` for the development. It watches your files for changes and reloads the site automatically.
 - `grunt` does exactly the same as above but doesn't open a new broser tab, so that when you have the site open already, executing another task and then want to continue developing, you just can go on without closing a redundant browser tab.
 - `grunt deploy` compiles compressed css, throws the needless scss files out of the dist folder and concatenates all js files into one.
 - `grunt shot` creates a **test** folder in which it throws some screenshots of the site in diffenrent viewport sizes. These can be adjusted in the Gruntfile.
-- `grunt sprite` takes all png-files form **app/assets/img/css/sprites/src** and generates the **s.png** sprite image one folder above. Also it compiles a **_sprites.scss** file, which goes into **app/assets/css/ui/base**. Then you can include the mixin **@include sprite($sprite)** to an element, where **$sprite** is the name of the src-png file, you wish to add to the element.
+- `grunt sprite` takes all png-files form **app/assets/img/css/sprites/src** and generates the "**s.png**" sprite one folder above. Also it compiles a "**_sprites.scss**" file, which goes into **app/assets/css/ui/base**. Then you can include the mixin **@include sprite($sprite)** to an element, where **$sprite** is the name of the src-png file, you wish to add to the element.
 
 ###Prerequisities
 
 - For `grunt shot` and `grunt sprite` you must have [PhantomJS] (http://phantomjs.org/) installed.
-- For Sass sourcemaps-support you must have the Sass pre-release version installed. `gem install sass -v 3.3.0.alpha.256 --pre` is workin fine here. Otherwise, you have to remove the option from the sass in Gruntfile.js.
+- For Sass sourcemaps-support you must have the Sass pre-release version installed. `gem install sass -v 3.3.0.alpha.256 --pre` is working fine here. Otherwise, you have to remove the option from the **sass** task in Gruntfile.js.
 
 ###Troubleshooting
 
