@@ -1,5 +1,7 @@
 #Getting started
 
+###Installation
+
 After cloning this project, you have to execute the following commands:
 
 - `npm install`
