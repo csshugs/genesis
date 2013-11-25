@@ -21,6 +21,10 @@ module.exports = function(grunt) {
                 files: ['app/assets/img/**/{.*,*,*/*}'],
                 tasks: 'img'
             },
+            sprite: {
+                files: ['app/assets/img/css/sprites/**/{.*,*,*/*}'],
+                tasks: 'copysprite'
+            },
             livereload: {
                 options: {
                     livereload: true,
@@ -266,6 +270,10 @@ module.exports = function(grunt) {
         'copy:js'
     ]);
     grunt.registerTask('img', [
+        'copy:img'
+    ]);
+    grunt.registerTask('copysprite', [
+        'sprite',
         'copy:img'
     ]);
 
