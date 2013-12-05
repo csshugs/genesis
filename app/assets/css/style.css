@@ -1,11 +1,9 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
 /**
- *
- * sass --watch style.scss:style.min.css --style compressed
- *
  * Here we pull in some variables, include the inuit.css framework, then add our
  * project-specific components afterwards.
  */
@@ -36,7 +34,19 @@
     $OVERRIDES
 \*------------------------------------*/
 /**
- * Place any variables that should override inuit.cssÔÇÖ defaults here.
+ * Base stuff
+ */
+/**
+ * Base font-family.
+ */
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+/**
+ * Brand stuff
  */
 /*------------------------------------*\
     $CUSTOM
@@ -915,7 +925,7 @@ ul, ol, dd {
     $MAIN
 \*------------------------------------*/
 html {
-  font: 1em/1.5 sans-serif;
+  font: 1em/1.5 "Lato", sans-serif;
   overflow-y: scroll;
   min-height: 100%;
 }
@@ -2496,17 +2506,17 @@ label,
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important;
+  font-family: "Comic Sans MS", sans-serif!important;
+  color: #610303!important;
 }
 
 .brand-face {
-  font-family: "Helvetica Neue", sans-serif!important;
+  font-family: "Comic Sans MS", sans-serif!important;
 }
 
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important;
+  color: #610303!important;
 }
 
 /*------------------------------------*\
@@ -2902,9 +2912,124 @@ label,
   }
 }
 /* endif */
+/*------------------------------------*\
+    $UI-CONTENTS
+\*------------------------------------*/
+/**
+ * MIXINS............Custom made SASS-mixins
+ * SETUP.............html, body overrides and basic styling for .page-wrap etc.
+ * SPRITES...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
+ * FONTS.............Import your webfonts right here
+ * VISIBILITY........Visibility classes to show/hide elements depending on viewport-width
+ * PAGE-HEAD.........Page header container
+ * PAGE-FOOT.........Page footer container
+ * SITE-LOGO.........The brand logo
+ * SITE-NAV..........Main navigation
+ * TYPOGRAPHY........Basic typography settings
+ * SHAME.............For hacks and quick fixes, which will surely be repaired some day
+ */
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * Scut color swap
+ * http://davidtheclark.github.io/scut/#color_swap
+ */
+/*------------------------------------*\
+    $SETUP
+\*------------------------------------*/
+/**
+ * The main content-wrapper
+ */
+.page-wrap {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/*------------------------------------*\
+    $FONTS
+\*------------------------------------*/
+/**
+ * Lato
+ */
+/*------------------------------------*\
+    $VISIBILITY
+\*------------------------------------*/
+.show-on-palm {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+  .show-on-palm {
+    display: block;
+  }
+}
+
+.show-on-lap {
+  display: none;
+}
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .show-on-lap {
+    display: block;
+  }
+}
+
+.show-on-lap-and-up {
+  display: none;
+}
+@media only screen and (min-width: 481px) {
+  .show-on-lap-and-up {
+    display: block;
+  }
+}
+
+.show-on-portable {
+  display: none;
+}
+@media only screen and (max-width: 1023px) {
+  .show-on-portable {
+    display: block;
+  }
+}
+
+.show-on-desk {
+  display: none;
+}
+@media only screen and (min-width: 1024px) {
+  .show-on-desk {
+    display: block;
+  }
+}
+
+.show-on-desk-wide {
+  display: none;
+}
+@media only screen and (min-width: 1200px) {
+  .show-on-desk-wide {
+    display: block;
+  }
+}
+
+/*------------------------------------*\
+    $PAGE-HEAD
+\*------------------------------------*/
+/*------------------------------------*\
+    $PAGE-FOOT
+\*------------------------------------*/
+/*------------------------------------*\
+    $SITE-LOGO
+\*------------------------------------*/
+/*------------------------------------*\
+    $SITE-NAV
+\*------------------------------------*/
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
 /*------------------------------------*\
     $SHAME
 \*------------------------------------*/

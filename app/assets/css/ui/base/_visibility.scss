@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    $VISIBILITY
+\*------------------------------------*/
+.show-on-palm{
+	display: none;
+
+	@include media-query(palm){
+		display: block;
+	}
+}
+
+.show-on-lap{
+	display: none;
+
+	@include media-query(lap){
+		display: block;
+	}
+}
+
+.show-on-lap-and-up{
+	display: none;
+
+	@include media-query(lap-and-up){
+		display: block;
+	}
+}
+
+.show-on-portable{
+	display: none;
+
+	@include media-query(portable){
+		display: block;
+	}
+}
+
+.show-on-desk{
+	display: none;
+
+	@include media-query(desk){
+		display: block;
+	}
+}
+
+.show-on-desk-wide{
+	display: none;
+
+	@include media-query(desk-wide){
+		display: block;
+	}
+}

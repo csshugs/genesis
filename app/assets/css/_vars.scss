@@ -56,8 +56,45 @@ $use-greybox:       false;
     $OVERRIDES
 \*------------------------------------*/
 /**
- * Place any variables that should override inuit.css’ defaults here.
+ * Base stuff
  */
+$base-font-size:    16px;
+$base-line-height:  24px;
+
+/**
+ * Base font-family.
+ */
+$base-font-family: 	'Lato', sans-serif;
+
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+$lap-start:         481px;
+$desk-start:        1024px;
+$desk-wide-start:   1200px;
+
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$giga-size:         96px;
+$mega-size:         72px;
+$kilo-size:         48px;
+
+$h1-size:           36px; // .alpha
+$h2-size:           30px; // .beta
+$h3-size:           24px; // .gamma
+$h4-size:           20px; // .delta
+$h5-size:           16px; // .epsilon
+$h6-size:           14px; // .zeta
+
+$milli-size:        12px;
+$micro-size:        10px;
+
+/**
+ * Brand stuff
+ */
+$brand-color:       #610303;
+$brand-face:        "Comic Sans MS", sans-serif;
 
 
 
@@ -69,3 +106,4 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+$page-wrap-width: 		1140px;
