@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
         watch: {
             scss: {
-                files: ['app/assets/css/**/*.scss'],
+                files: ['app/assets/css/**/{.*,*,*/*}'],
                 tasks: 'scss'
             },
             html: {
