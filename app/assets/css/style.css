@@ -2952,6 +2952,16 @@ label,
   padding-right: 24px;
 }
 
+::selection {
+  background-color: #610303;
+  color: #fff;
+}
+
+::-moz-selection {
+  background-color: #610303;
+  color: #fff;
+}
+
 /*------------------------------------*\
     $FONTS
 \*------------------------------------*/
