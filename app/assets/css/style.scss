@@ -47,8 +47,9 @@
 @import "ui/base/fonts";
 @import "ui/base/visibility";
 @import "ui/layout/page-head";
+@import "ui/layout/page-content";
 @import "ui/layout/page-foot";
-@import "ui/modules/site-logo";
-@import "ui/modules/site-nav";
+@import "ui/components/site-logo";
+@import "ui/components/site-nav";
 @import "ui/theme/typography";
 @import "ui/shame";
