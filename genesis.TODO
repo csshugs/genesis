@@ -1,0 +1,10 @@
+Plugins:
+ ☐ grunt-notify            (https://github.com/dylang/grunt-notify)
+ ☐ grunt-autoprefixer      (https://github.com/nDmitry/grunt-autoprefixer)
+ ☐ grunt-contrib-uglify    (https://github.com/gruntjs/grunt-contrib-uglify)
+ ☐ GRUNT ENVIRONMENT - SANDY FRAGEN!
+ ☐ grunt-sass              (https://github.com/sindresorhus/grunt-sass)
+
+Einbauen:
+ ☐ scut                    (http://davidtheclark.github.io/scut)
+ ☐ bower
