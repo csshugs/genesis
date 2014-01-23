@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             },
             compressed: {
                 options: {
-                    style: 'compressed'
+                    style: 'expanded'
                 },
                 files: {
                     'dist/assets/css/style.css': 'app/assets/css/style.scss'
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                 tasks: 'html'
             },
             js: {
-                files: ['app/assets/js/**/*.js'],
+                files: ['app/assets/js/*.js'],
                 tasks: 'js'
             },
             img: {
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                 files: [
                     'dist/**/*.html',
                     'dist/assets/css/{,*/}*.css',
-                    'dist/assets/js/*/*.js',
+                    'dist/assets/js/*.js',
                     'dist/assets/img/{,*/}*.*'
                 ]
             }
@@ -102,8 +102,16 @@ module.exports = function(grunt) {
             },
             js: {
                 files: [
-                    { expand: true, cwd: './app/assets/js', src: ['./**/*.*'], dest: 'dist/assets/js' }
+                    { expand: true, cwd: './app/assets/js', src: ['*.*'], dest: 'dist/assets/js' }
                 ]
+            },
+            modernizr: {
+                src: './bower_components/modernizr/modernizr.js',
+                dest: 'dist/assets/js/vendor/modernizr.js'
+            },
+            jquery: {
+                src: './bower_components/jquery/jquery.min.js',
+                dest: 'dist/assets/js/vendor/jquery.min.js'
             },
             img: {
                 files: [
@@ -137,15 +145,37 @@ module.exports = function(grunt) {
                 separator: ' ',
             },
             dist: {
-                src: ['./app/assets/js/plugins/plugins.js', './app/assets/js/app/main.js'],
+                src: ['./app/assets/js/plugins.js', './app/assets/js/main.js'],
                 dest: 'dist/assets/js/script.js',
             },
+        },
+
+        uglify: {
+            script: {
+                files: {
+                    'dist/assets/js/script.js': ['dist/assets/js/script.js']
+                }
+            },
+            modernizr: {
+                files: {
+                    'dist/assets/js/vendor/modernizr.js': ['dist/assets/js/vendor/modernizr.js']
+                }
+            }
         },
 
         clean: {
             build: {
                 src: ["./dist"]
             }
+        },
+
+        autoprefixer: {
+            deploy: {
+                options: {
+                    browsers: ['last 3 version', 'ie 8', 'ie 9']
+                },
+                src: 'dist/assets/css/style.css'
+            },
         },
 
         concurrent: {
@@ -169,12 +199,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
 
 
     // Initial dev task, cleans /dist, opens the site in the browser.
     grunt.registerTask('init', [
         'clean:build',
+        'copy:modernizr',
         'copy:js',
         'copy:img',
         'copy:fonts',
@@ -187,6 +220,7 @@ module.exports = function(grunt) {
 
     // Default dev task without open.
     grunt.registerTask('default', [
+        'copy:modernizr',
         'copy:js',
         'copy:img',
         'copy:fonts',
@@ -201,8 +235,12 @@ module.exports = function(grunt) {
         'clean:build',
         'sass:compressed',
         'copy:deploy',
+        'copy:modernizr',
+        'copy:jquery',
         'assemble:deploy',
-        'concat'
+        'autoprefixer',
+        'concat',
+        'uglify'
     ]);
 
     grunt.registerTask('scss', [
