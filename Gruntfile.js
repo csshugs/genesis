@@ -2,7 +2,21 @@ module.exports = function(grunt) {
 
 
 
+    require('time-grunt')(grunt);
+
+
+
     grunt.initConfig({
+
+
+
+        genesis: {
+            app: 'app',
+            dist: 'dist'
+        },
+
+
+
         pkg: grunt.file.readJSON('package.json'),
 
         sass: {
@@ -16,10 +30,10 @@ module.exports = function(grunt) {
             },
             compressed: {
                 options: {
-                    style: 'expanded'
+                    style: 'compressed'
                 },
                 files: {
-                    'dist/assets/css/style.css': 'app/assets/css/style.scss'
+                    'build/assets/css/style.css': 'app/assets/css/style.scss'
                 }
             }
         },
@@ -35,9 +49,11 @@ module.exports = function(grunt) {
             dev: {
                 files: {'dist/': ['app/templates/pages/*.hbs' ]},
             },
-            deploy: {
-                options: {layout: 'default--deploy.hbs' },
-                files: {'dist/': ['app/templates/pages/*.hbs' ]},
+            build: {
+                options: {
+                    assets: 'build/assets'
+                },
+                files: {'build/': ['app/templates/pages/*.hbs' ]},
             }
         },
 
@@ -51,7 +67,7 @@ module.exports = function(grunt) {
                 tasks: 'html'
             },
             js: {
-                files: ['app/assets/js/*.js'],
+                files: ['app/assets/js/**/{.*,*,*/*}'],
                 tasks: 'js'
             },
             img: {
@@ -70,7 +86,7 @@ module.exports = function(grunt) {
                 files: [
                     'dist/**/*.html',
                     'dist/assets/css/{,*/}*.css',
-                    'dist/assets/js/*.js',
+                    'dist/assets/js/{,*/}*.*',
                     'dist/assets/img/{,*/}*.*'
                 ]
             }
@@ -92,12 +108,12 @@ module.exports = function(grunt) {
             }
         },
 
-        copy: {
+        copy: {            
             deploy: {
                 files: [
-                    { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'dist/assets/js' },
-                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'dist/assets/img' },
-                    { expand: true, cwd: './app/assets/fonts', src: ['./**/*.*'], dest: 'dist/assets/fonts' }
+                    { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'build/assets/js' },
+                    { expand: true, cwd: './app/assets/img', src: ['./**/*.*'], dest: 'build/assets/img' },
+                    { expand: true, cwd: './app/assets/fonts', src: ['./**/*.*'], dest: 'build/assets/fonts' }
                 ]
             },
             js: {
@@ -105,13 +121,17 @@ module.exports = function(grunt) {
                     { expand: true, cwd: './app/assets/js', src: ['*.*'], dest: 'dist/assets/js' }
                 ]
             },
-            modernizr: {
+            modernizr_dev: {
                 src: './bower_components/modernizr/modernizr.js',
                 dest: 'dist/assets/js/vendor/modernizr.js'
             },
+            modernizr_build: {
+                src: './bower_components/modernizr/modernizr.js',
+                dest: 'build/assets/js/vendor/modernizr.js'
+            },
             jquery: {
                 src: './bower_components/jquery/jquery.min.js',
-                dest: 'dist/assets/js/vendor/jquery.min.js'
+                dest: 'build/assets/js/vendor/jquery.min.js'
             },
             img: {
                 files: [
@@ -144,28 +164,38 @@ module.exports = function(grunt) {
             options: {
                 separator: ' ',
             },
-            dist: {
-                src: ['./app/assets/js/plugins.js', './app/assets/js/main.js'],
-                dest: 'dist/assets/js/script.js',
+            dev: {
+                src: ['./app/assets/js/plugins/*.js'],
+                dest: 'dist/assets/js/plugins/plugins.js',
+            },
+            build: {
+                src: ['./build/assets/js/plugins/plugins.js', './app/assets/js/script.js'],
+                dest: 'build/assets/js/script.js',
             },
         },
 
         uglify: {
             script: {
                 files: {
-                    'dist/assets/js/script.js': ['dist/assets/js/script.js']
+                    'build/assets/js/script.js': ['build/assets/js/script.js']
                 }
             },
             modernizr: {
                 files: {
-                    'dist/assets/js/vendor/modernizr.js': ['dist/assets/js/vendor/modernizr.js']
+                    'build/assets/js/vendor/modernizr.js': ['build/assets/js/vendor/modernizr.js']
                 }
             }
         },
 
         clean: {
-            build: {
+            dev: {
                 src: ["./dist"]
+            },
+            build: {
+                src: ["./build"]
+            },
+            plugins: {
+                src: ["./dist/assets/js/plugins/"]
             }
         },
 
@@ -174,13 +204,48 @@ module.exports = function(grunt) {
                 options: {
                     browsers: ['last 3 version', 'ie 8', 'ie 9']
                 },
-                src: 'dist/assets/css/style.css'
+                src: 'build/assets/css/style.css'
             },
+        },
+
+        dev_prod_switch: {
+            options: {
+                environment: '',
+                env_char: '#',
+                env_block_dev: 'env:dev',
+                env_block_prod: 'env:prod'
+            },
+            dev: {
+                options: {
+                    environment: 'dev'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: './dist/',
+                        src: ['*.html'],
+                        dest: './dist/'
+                    }
+                ]
+            },
+            build: {
+                options: {
+                    environment: 'prod'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: './build/',
+                        src: ['*.html'],
+                        dest: './build/'
+                    }
+                ]
+            }
         },
 
         concurrent: {
             dev: [
-                'sass'
+                'sass:dev'
             ]
         }
 
@@ -201,32 +266,38 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-dev-prod-switch');
 
 
 
     // Initial dev task, cleans /dist, opens the site in the browser.
     grunt.registerTask('init', [
-        'clean:build',
-        'copy:modernizr',
+        'clean:dev',
+        'copy:modernizr_dev',
         'copy:js',
+        'concat:dev',
         'copy:img',
         'copy:fonts',
         'assemble:dev',
-        'concurrent:dev',
+        'concurrent',
         'connect',
         'open',
+        'dev_prod_switch:dev',
         'watch'
     ]);
 
     // Default dev task without open.
     grunt.registerTask('default', [
-        'copy:modernizr',
+        'clean:dev',
+        'copy:modernizr_dev',
         'copy:js',
+        'concat:dev',
         'copy:img',
         'copy:fonts',
         'assemble:dev',
-        'concurrent:dev',
+        'concurrent',
         'connect',
+        'dev_prod_switch:dev',
         'watch'
     ]);
 
@@ -235,12 +306,15 @@ module.exports = function(grunt) {
         'clean:build',
         'sass:compressed',
         'copy:deploy',
-        'copy:modernizr',
+        'copy:modernizr_build',
         'copy:jquery',
-        'assemble:deploy',
+        'assemble:build',
         'autoprefixer',
-        'concat',
-        'uglify'
+        'concat:dev',
+        'concat:build',
+        'uglify',
+        'dev_prod_switch:build',
+        'clean:plugins'
     ]);
 
     grunt.registerTask('scss', [
@@ -248,11 +322,13 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('html', [
-        'assemble:dev'
+        'assemble',
+        'dev_prod_switch:dev'
     ]);
 
     grunt.registerTask('js', [
-        'copy:js'
+        'copy:js',
+        'concat:dev'
     ]);
 
     grunt.registerTask('img', [

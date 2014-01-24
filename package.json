@@ -15,6 +15,10 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-notify": "~0.2.17",
-    "grunt-autoprefixer": "~0.6.4"
+    "grunt-autoprefixer": "~0.6.4",
+    "grunt-dev-prod-switch": "~0.1.4"
+  },
+  "dependencies": {
+    "time-grunt": "~0.2.8"
   }
 }
