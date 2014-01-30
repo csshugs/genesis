@@ -1,0 +1,12 @@
+{
+  "name": "genesis",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "git://github.com/components/jquery.git#~1.10.2",
+    "modernizr": "git://github.com/Modernizr/Modernizr.git#~2.7.1",
+    "inuit.css": "~5.0.0"
+  },
+  "devDependencies": {
+    "scut": "~0.8.0"
+  }
+}

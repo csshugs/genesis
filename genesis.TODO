@@ -1,0 +1,12 @@
+Plugins:
+ ☐ grunticon               (https://github.com/filamentgroup/grunticon)
+ ✔ jshint @done (14-01-30 12:27)
+ ✔ Eigenen Production Ordner @done (14-01-24 16:34)
+ ✔ GRUNT ENVIRONMENT - SANDY FRAGEN! @done (14-01-24 16:34)
+ ✔ grunt-autoprefixer      (https://github.com/nDmitry/grunt-autoprefixer) @done (14-01-23 22:16)
+ ✔ grunt-contrib-uglify    (https://github.com/gruntjs/grunt-contrib-uglify) @done (14-01-23 21:44)
+ ✔ grunt-sass              (https://github.com/sindresorhus/grunt-sass) @done (14-01-23 18:22)
+
+Einbauen:
+ ✔ scut                    (http://davidtheclark.github.io/scut) @done (14-01-23 21:12)
+ ✔ bower @done (14-01-23 21:13)
