@@ -1,14 +1,8 @@
 module.exports = function(grunt) {
 
-
-
     require('time-grunt')(grunt);
 
-
-
     grunt.initConfig({
-
-
 
         pkg: grunt.file.readJSON('package.json'),
 
@@ -341,7 +335,5 @@ module.exports = function(grunt) {
         'sprite',
         'copy:img'
     ]);
-
-
 
 };
