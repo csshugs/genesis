@@ -1,10 +1,6 @@
 Plugins:
- ☐ grunt-notify            (https://github.com/dylang/grunt-notify) - SUPPORT
- ☐ JAVA - SUPPORT
- ☐ jshint
  ☐ grunticon               (https://github.com/filamentgroup/grunticon)
- ☐ editor config
- ☐ Variablen
+ ✔ jshint @done (14-01-30 12:27)
  ✔ Eigenen Production Ordner @done (14-01-24 16:34)
  ✔ GRUNT ENVIRONMENT - SANDY FRAGEN! @done (14-01-24 16:34)
  ✔ grunt-autoprefixer      (https://github.com/nDmitry/grunt-autoprefixer) @done (14-01-23 22:16)

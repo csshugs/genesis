@@ -10,13 +10,6 @@ module.exports = function(grunt) {
 
 
 
-        genesis: {
-            app: 'app',
-            dist: 'dist'
-        },
-
-
-
         pkg: grunt.file.readJSON('package.json'),
 
         sass: {
@@ -169,7 +162,7 @@ module.exports = function(grunt) {
                 dest: 'dist/assets/js/plugins/plugins.js',
             },
             build: {
-                src: ['./build/assets/js/plugins/plugins.js', './app/assets/js/script.js'],
+                src: ['./dist/assets/js/plugins/plugins.js', './app/assets/js/script.js'],
                 dest: 'build/assets/js/script.js',
             },
         },
@@ -206,6 +199,11 @@ module.exports = function(grunt) {
                 },
                 src: 'build/assets/css/style.css'
             },
+        },
+
+        jshint: {
+            dev: ['dist/assets/js/script.js'],
+            build: ['build/assets/js/script.js']
         },
 
         dev_prod_switch: {
@@ -264,9 +262,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-dev-prod-switch');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
 
 
@@ -280,6 +278,7 @@ module.exports = function(grunt) {
         'copy:fonts',
         'assemble:dev',
         'concurrent',
+        'jshint:dev',
         'connect',
         'open',
         'dev_prod_switch:dev',
@@ -296,6 +295,7 @@ module.exports = function(grunt) {
         'copy:fonts',
         'assemble:dev',
         'concurrent',
+        'jshint:dev',
         'connect',
         'dev_prod_switch:dev',
         'watch'
@@ -312,6 +312,7 @@ module.exports = function(grunt) {
         'autoprefixer',
         'concat:dev',
         'concat:build',
+        'jshint:build',
         'uglify',
         'dev_prod_switch:build',
         'clean:plugins'
@@ -328,7 +329,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('js', [
         'copy:js',
-        'concat:dev'
+        'concat:dev',
+        'jshint:dev'
     ]);
 
     grunt.registerTask('img', [
