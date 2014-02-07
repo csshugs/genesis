@@ -108,11 +108,7 @@ module.exports = function(grunt) {
                     { expand: true, cwd: './app/assets/js', src: ['*.*'], dest: 'dist/assets/js' }
                 ]
             },
-            modernizr_dev: {
-                src: './bower_components/modernizr/modernizr.js',
-                dest: 'dist/assets/js/vendor/modernizr.js'
-            },
-            modernizr_build: {
+            modernizr: {
                 src: './bower_components/modernizr/modernizr.js',
                 dest: 'build/assets/js/vendor/modernizr.js'
             },
@@ -200,30 +196,13 @@ module.exports = function(grunt) {
             build: ['build/assets/js/script.js']
         },
 
-        dev_prod_switch: {
+        processhtml: {
             options: {
-                environment: '',
-                env_char: '#',
-                env_block_dev: 'env:dev',
-                env_block_prod: 'env:prod'
-            },
-            dev: {
-                options: {
-                    environment: 'dev'
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: './dist/',
-                        src: ['*.html'],
-                        dest: './dist/'
-                    }
-                ]
+                data: {
+                    message: 'Hello world!'
+                }
             },
             build: {
-                options: {
-                    environment: 'prod'
-                },
                 files: [
                     {
                         expand: true,
@@ -257,15 +236,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-dev-prod-switch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-processhtml');
 
 
 
     // Initial dev task, cleans /dist, opens the site in the browser.
     grunt.registerTask('init', [
         'clean:dev',
-        'copy:modernizr_dev',
         'copy:js',
         'concat:dev',
         'copy:img',
@@ -275,14 +253,12 @@ module.exports = function(grunt) {
         'jshint:dev',
         'connect',
         'open',
-        'dev_prod_switch:dev',
         'watch'
     ]);
 
     // Default dev task without open.
     grunt.registerTask('default', [
         'clean:dev',
-        'copy:modernizr_dev',
         'copy:js',
         'concat:dev',
         'copy:img',
@@ -291,7 +267,6 @@ module.exports = function(grunt) {
         'concurrent',
         'jshint:dev',
         'connect',
-        'dev_prod_switch:dev',
         'watch'
     ]);
 
@@ -300,7 +275,7 @@ module.exports = function(grunt) {
         'clean:build',
         'sass:compressed',
         'copy:deploy',
-        'copy:modernizr_build',
+        'copy:modernizr',
         'copy:jquery',
         'assemble:build',
         'autoprefixer',
@@ -308,7 +283,7 @@ module.exports = function(grunt) {
         'concat:build',
         'jshint:build',
         'uglify',
-        'dev_prod_switch:build',
+        'processhtml',
         'clean:plugins'
     ]);
 
@@ -317,8 +292,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('html', [
-        'assemble',
-        'dev_prod_switch:dev'
+        'assemble'
     ]);
 
     grunt.registerTask('js', [

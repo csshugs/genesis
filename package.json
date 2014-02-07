@@ -15,7 +15,6 @@
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-autoprefixer": "~0.6.4",
-    "grunt-dev-prod-switch": "~0.1.4",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-processhtml": "~0.3.0"
   },
