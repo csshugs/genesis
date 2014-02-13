@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     'dist/assets/css/style.css': 'app/assets/css/style.scss'
                 }
             },
-            compressed: {
+            build: {
                 options: {
                     style: 'compressed'
                 },
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
             }
         },
 
-        copy: {            
+        copy: {
             deploy: {
                 files: [
                     { expand: true, cwd: './app/assets/js', src: ['./vendor/*.*'], dest: 'build/assets/js' },
@@ -273,7 +273,7 @@ module.exports = function(grunt) {
     // Deploy task, compressing the css and concatenating the js files
     grunt.registerTask('deploy', [
         'clean:build',
-        'sass:compressed',
+        'sass:build',
         'copy:deploy',
         'copy:modernizr',
         'copy:jquery',
