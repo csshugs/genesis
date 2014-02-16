@@ -11,5 +11,4 @@ test/
 .DS_Store
 *.log
 .grunt
-*.sublime-project
 *.sublime-workspace
