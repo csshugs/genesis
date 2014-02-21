@@ -292,7 +292,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('html', [
-        'assemble'
+        'assemble:dev'
     ]);
 
     grunt.registerTask('js', [
