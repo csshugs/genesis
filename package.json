@@ -17,7 +17,8 @@
     "grunt-autoprefixer": "~0.6.4",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-processhtml": "~0.3.0",
-    "jit-grunt": "~0.2.3"
+    "jit-grunt": "~0.2.3",
+    "grunt-todos": "~0.2.0"
   },
   "dependencies": {
     "time-grunt": "~0.2.8"
