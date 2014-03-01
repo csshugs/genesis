@@ -21,7 +21,7 @@ There are four different grunt tasks available:
 
 ###Prerequisities
 
-- For `grunt sprite` you must have [PhantomJS] (http://phantomjs.org/) installed.
+- For `grunt sprite` you must have [PhantomJS](http://phantomjs.org/) installed.
 
 ###Troubleshooting
 
