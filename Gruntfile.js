@@ -66,6 +66,9 @@ module.exports = function(grunt) {
                 files: ['app/assets/img/css/sprites/src/{.*,*,*/*}'],
                 tasks: 'copysprite'
             },
+            grunt: {
+                files: ['Gruntfile.js']
+            },
             livereload: {
                 options: {
                     livereload: true,
