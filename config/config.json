@@ -1,0 +1,7 @@
+{
+  "src": [
+    "config/*.js*",
+    "config/*.coffee",
+    "config/*.y*ml"
+  ]
+}
