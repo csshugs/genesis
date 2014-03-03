@@ -7,7 +7,6 @@ module.exports = function(grunt) {
         notify: 'grunt-notify'
     });
 
-
     var configs = require('load-grunt-configs')(grunt);
     grunt.initConfig(configs);
 
@@ -23,7 +22,6 @@ module.exports = function(grunt) {
         'concurrent',
         'jshint:dev',
         'connect',
-        'notify:server',
         'open',
         'watch'
     ]);
