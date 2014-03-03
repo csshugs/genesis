@@ -4,7 +4,9 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('jit-grunt')(grunt, {
         sprite: 'grunt-spritesmith',
-        notify: 'grunt-notify'
+        notify: 'grunt-notify',
+        notify_hooks: 'grunt-notify'
+
     });
 
     var configs = require('load-grunt-configs')(grunt);
@@ -38,6 +40,7 @@ module.exports = function(grunt) {
         'jshint:dev',
         'connect',
         'notify:server',
+        'notify_hooks',
         'watch'
     ]);
 
