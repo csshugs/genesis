@@ -257,6 +257,7 @@ module.exports = function(grunt) {
         'concurrent',
         'jshint:dev',
         'connect',
+        'notify:server',
         'open',
         'watch'
     ]);
