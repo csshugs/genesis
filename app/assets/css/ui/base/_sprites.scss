@@ -1,3 +1,13 @@
+  $favicon-x: 0px;
+  $favicon-y: 0px;
+  $favicon-offset-x: 0px;
+  $favicon-offset-y: 0px;
+  $favicon-width: 32px;
+  $favicon-height: 32px;
+  $favicon-total-width: 32px;
+  $favicon-total-height: 32px;
+  $favicon-image: '../../assets/img/css/sprites/s.png';
+  $favicon: 0px 0px 0px 0px 32px 32px 32px 32px '../../assets/img/css/sprites/s.png';
 
   @mixin sprite-width($sprite) {
     width: nth($sprite, 5);

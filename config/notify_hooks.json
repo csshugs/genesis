@@ -1,0 +1,6 @@
+{
+  "options": {
+    "enabled": true,
+    "title": "<%= pkg.name &>"
+  }
+}

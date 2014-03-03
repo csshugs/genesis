@@ -1,0 +1,21 @@
+{
+  "options": {
+    "priorities": {
+      "low": {},
+      "med": {},
+      "high": {}
+    },
+    "verbose": false
+  },
+  "scripts": {
+    "src": [
+      "./app/assets/**/*.js"
+    ]
+  },
+  "style": {
+    "src": [
+      "./app/assets/**/*.scss",
+      "./app/assets/**/*.css"
+    ]
+  }
+}
