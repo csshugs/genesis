@@ -222,28 +222,29 @@ module.exports = function(grunt) {
             dev: [
                 'sass:dev'
             ]
+        },
+
+        notify: {
+            server: {
+                options: {
+                    title: '<%= pkg.name %> - server running',
+                    message: '<%= open.server.path %>'
+                }
+            }
+        },
+
+        'notify_hooks': {
+            options: {
+                enabled: true,
+                title: '<%= pkg.name &>'
+            }
         }
 
     });
 
 
 
-    // grunt.loadNpmTasks('grunt-contrib-sass');
-    // grunt.loadNpmTasks('grunt-contrib-connect');
-    // grunt.loadNpmTasks('assemble');
-    // grunt.loadNpmTasks('grunt-open');
-    // grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-contrib-copy');
-    // grunt.loadNpmTasks('grunt-concurrent');
-    // grunt.loadNpmTasks('grunt-spritesmith');
-    // grunt.loadNpmTasks('grunt-contrib-clean');
-    // grunt.loadNpmTasks('grunt-contrib-concat');
-    // grunt.loadNpmTasks('grunt-contrib-uglify');
-    // grunt.loadNpmTasks('grunt-autoprefixer');
-    // grunt.loadNpmTasks('grunt-contrib-jshint');
-    // grunt.loadNpmTasks('grunt-processhtml');
-
-
+    grunt.loadNpmTasks('grunt-notify');
 
     // Initial dev task, cleans /dist, opens the site in the browser.
     grunt.registerTask('init', [
@@ -271,6 +272,7 @@ module.exports = function(grunt) {
         'concurrent',
         'jshint:dev',
         'connect',
+        'notify:server',
         'watch'
     ]);
 
