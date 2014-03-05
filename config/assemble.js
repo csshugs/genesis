@@ -8,7 +8,7 @@ module.exports = {
             "app/templates/pages/*.hbs",
             "app/templates/parts/*.hbs"
         ],
-        data: ['app/templates/data/**/{.*,*,*/*}']
+        data: ['app/templates/data/**/*.json']
     },
     "dev": {
         "files": {
