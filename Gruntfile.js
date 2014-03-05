@@ -6,7 +6,6 @@ module.exports = function(grunt) {
         sprite: 'grunt-spritesmith',
         notify: 'grunt-notify',
         notify_hooks: 'grunt-notify'
-
     });
 
     var configs = require('load-grunt-configs')(grunt);

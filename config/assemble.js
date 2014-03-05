@@ -7,7 +7,8 @@ module.exports = {
         "partials": [
             "app/templates/pages/*.hbs",
             "app/templates/parts/*.hbs"
-        ]
+        ],
+        data: ['app/templates/data/**/{.*,*,*/*}']
     },
     "dev": {
         "files": {
