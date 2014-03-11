@@ -3,19 +3,15 @@
     STYLE.CSS
 \*------------------------------------*/
 /**
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
-
-
-
-
-
-/**
- * Setup
+ * Framework
  */
 @import "vars";
 @import "../../../bower_components/inuit.css/inuit";
+
+
+/**
+ * Scut
+ */
 @import "../../../bower_components/scut/dist/scut";
 
 
@@ -44,10 +40,6 @@
  *
  *
  * SHAME.............For hacks and quick fixes, which will surely be repaired some day
- */
-
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
  */
 @import "ui/base/mixins";
 @import "ui/base/setup";
