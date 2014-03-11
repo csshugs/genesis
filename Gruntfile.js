@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         notify: 'grunt-notify',
         notify_hooks: 'grunt-notify'
     });
+
     var configs = require('load-grunt-configs')(grunt);
     grunt.initConfig(configs);
 
