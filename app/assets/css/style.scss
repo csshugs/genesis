@@ -22,39 +22,35 @@
     $UI-CONTENTS
 \*------------------------------------*/
 /**
- * MIXINS............Custom made SASS-mixins
- * SETUP.............html, body overrides and basic styling for .page-wrap etc.
- * SPRITES...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
- * FONTS.............Import your webfonts right here
- * VISIBILITY........Visibility classes to show/hide elements depending on viewport-width
+ * BASE:
+ * Mixins............Custom made SASS-mixins
+ * Setup.............html, body overrides and basic styling for .page-wrap etc.
+ * Sprites...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
+ * Fonts.............Import your webfonts right here
+ * Visibility........Visibility classes to show/hide elements depending on viewport-width
  *
- * PAGE-HEAD.........Page header container
- * PAGE-CONTENT......Page content container
- * PAGE-FOOT.........Page footer container
+ * LAYOUT:
+ * Page-Head.........Page header container
+ * Page-Content......Page content container
+ * Page-Foot.........Page footer container
  *
- * SITE-LOGO.........The brand logo
- * SITE-NAV..........Main navigation
+ * COMPONENTS:
+ * Site-Logo.........The brand logo
+ * Site-Nav..........Main navigation
  *
- * TYPOGRAPHY........Basic typography settings
+ * THEME:
+ * Typography........Basic typography settings
+ *
+ * PLUGINS:
  *
  *
  *
  * SHAME.............For hacks and quick fixes, which will surely be repaired some day
  */
-@import "ui/base/mixins";
-@import "ui/base/setup";
-@import "ui/base/sprites"; // DON'T TOUCH THIS FILE!!!
-@import "ui/base/fonts";
-@import "ui/base/visibility";
-
-@import "ui/layout/page-head";
-@import "ui/layout/page-content";
-@import "ui/layout/page-foot";
-
-@import "ui/components/site-logo";
-@import "ui/components/site-nav";
-
-@import "ui/theme/typography";
+@import "ui/base/*.*";
+@import "ui/layout/*.*";
+@import "ui/components/*.*";
+@import "ui/theme/*.*";
 
 
 
