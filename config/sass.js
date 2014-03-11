@@ -1,7 +1,8 @@
 module.exports = {
     "dev": {
         "options": {
-            "style": "expanded"
+            "style": "expanded",
+            "require": "sass-globbing"
         },
         "files": {
             "dist/assets/css/style.css": "app/assets/css/style.scss"
@@ -9,7 +10,8 @@ module.exports = {
     },
     "build": {
         "options": {
-            "style": "compressed"
+            "style": "compressed",
+            "require": "sass-globbing"
         },
         "files": {
             "build/assets/css/style.css": "app/assets/css/style.scss"

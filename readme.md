@@ -21,6 +21,8 @@ There are four different grunt tasks available:
 
 ###Prerequisities
 
+- Since we are using [sass-globbing](https://github.com/chriseppstein/sass-globbing), you'll need to install it.
+- For letting grunt-notify work properly, you'll have to install a notification tool of your choice. [Read this](https://github.com/dylang/grunt-notify) for more information.
 - For `grunt sprite` you must have [PhantomJS](http://phantomjs.org/) installed.
 
 ###Troubleshooting
