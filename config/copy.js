@@ -3,12 +3,6 @@ module.exports = {
         "files": [
             {
                 "expand": true,
-                "cwd": "./app/assets/js",
-                "src": ["./vendor/*.*"],
-                "dest": "build/assets/js"
-            },
-            {
-                "expand": true,
                 "cwd": "./app/assets/img",
                 "src": ["./**/*.*"],
                 "dest": "build/assets/img"
