@@ -3,9 +3,14 @@
     STYLE.CSS
 \*------------------------------------*/
 /**
- * Framework
+ * Custom vars
  */
 @import "vars";
+
+
+/**
+ * Framework
+ */
 @import "../../../bower_components/inuit.css/inuit";
 
 
@@ -51,6 +56,7 @@
 @import "ui/layout/*.*";
 @import "ui/components/*.*";
 @import "ui/theme/*.*";
+@import "ui/plugins/*.*";
 
 
 
