@@ -1,22 +1,22 @@
 module.exports = {
     "scss": {
-        "files": ["app/assets/css/**/{.*,*,*/*}"],
+        "files": ["src/assets/css/**/{.*,*,*/*}"],
         "tasks": "scss"
     },
     "html": {
-        "files": ["app/templates/**/*.*"],
+        "files": ["src/templates/**/*.*"],
         "tasks": "html"
     },
     "js": {
-        "files": ["app/assets/js/**/{.*,*,*/*}"],
+        "files": ["src/assets/js/**/{.*,*,*/*}"],
         "tasks": "js"
     },
     "img": {
-        "files": ["app/assets/img/**/{.*,*,*/*}"],
+        "files": ["src/assets/img/**/{.*,*,*/*}"],
         "tasks": "img"
     },
     "sprite": {
-        "files": ["app/assets/img/css/sprites/src/{.*,*,*/*}"],
+        "files": ["src/assets/img/css/sprites/src/{.*,*,*/*}"],
         "tasks": "copysprite"
     },
     "grunt": {

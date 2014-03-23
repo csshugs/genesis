@@ -57,7 +57,6 @@ module.exports = function(grunt) {
         'jshint:build',
         'uglify',
         'processhtml',
-        'clean:plugins',
         'todos'
     ]);
 

@@ -8,9 +8,9 @@ module.exports = {
     "verbose": false
     },
     "scripts": {
-        "src": ["./app/assets/**/*.js"]
+        "src": ["./src/assets/**/*.js"]
     },
     "style": {
-        "src": ["./app/assets/**/*.scss"]
+        "src": ["./src/assets/**/*.scss"]
     }
 }

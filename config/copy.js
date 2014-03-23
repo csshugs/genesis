@@ -3,19 +3,13 @@ module.exports = {
         "files": [
             {
                 "expand": true,
-                "cwd": "./app/assets/js",
-                "src": ["./vendor/*.*"],
-                "dest": "build/assets/js"
-            },
-            {
-                "expand": true,
-                "cwd": "./app/assets/img",
+                "cwd": "./src/assets/img",
                 "src": ["./**/*.*"],
                 "dest": "build/assets/img"
             },
             {
                 "expand": true,
-                "cwd": "./app/assets/fonts",
+                "cwd": "./src/assets/fonts",
                 "src": ["./**/*.*"],
                 "dest": "build/assets/fonts"
             }
@@ -25,7 +19,7 @@ module.exports = {
         "files": [
             {
                 "expand": true,
-                "cwd": "./app/assets/js",
+                "cwd": "./src/assets/js",
                 "src": ["*.*"],
                 "dest": "dist/assets/js"
             }
@@ -43,7 +37,7 @@ module.exports = {
         "files": [
             {
                 "expand": true,
-                "cwd": "./app/assets/img",
+                "cwd": "./src/assets/img",
                 "src": ["./**/*.*"],
                 "dest": "dist/assets/img"
             }
@@ -53,7 +47,7 @@ module.exports = {
         "files": [
             {
                 "expand": true,
-                "cwd": "./app/assets/fonts",
+                "cwd": "./src/assets/fonts",
                 "src": ["./**/*.*"],
                 "dest": "dist/assets/fonts"
             }

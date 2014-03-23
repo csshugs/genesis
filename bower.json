@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "dependencies": {
     "jquery": "git://github.com/components/jquery.git#~1.10.2",
     "modernizr": "git://github.com/Modernizr/Modernizr.git#~2.7.1",

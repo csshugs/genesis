@@ -5,7 +5,7 @@ module.exports = {
             "require": "sass-globbing"
         },
         "files": {
-            "dist/assets/css/style.css": "app/assets/css/style.scss"
+            "dist/assets/css/style.css": "src/assets/css/style.scss"
         }
     },
     "build": {
@@ -14,7 +14,7 @@ module.exports = {
             "require": "sass-globbing"
         },
         "files": {
-            "build/assets/css/style.css": "app/assets/css/style.scss"
+            "build/assets/css/style.css": "src/assets/css/style.scss"
         }
     }
 }

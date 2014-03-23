@@ -8,10 +8,5 @@ module.exports = {
         "src": [
             "./build"
         ]
-    },
-    "plugins": {
-        "src": [
-            "./dist/assets/js/plugins/"
-        ]
     }
 }
