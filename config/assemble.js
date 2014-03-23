@@ -2,17 +2,17 @@ module.exports = {
     "options": {
         "flatten": true,
         "layout": "default.hbs",
-        "layoutdir": "app/templates/layouts",
+        "layoutdir": "src/templates/layouts",
         "assets": "dist/assets",
         "partials": [
-            "app/templates/pages/*.hbs",
-            "app/templates/parts/*.hbs"
+            "src/templates/pages/*.hbs",
+            "src/templates/parts/*.hbs"
         ],
-        "data": ['app/templates/data/**/*.json']
+        "data": ['src/templates/data/**/*.json']
     },
     "dev": {
         "files": {
-            "dist/": ["app/templates/pages/*.hbs"]
+            "dist/": ["src/templates/pages/*.hbs"]
         }
     },
     "build": {
@@ -20,7 +20,7 @@ module.exports = {
             "assets": "build/assets"
         },
         "files": {
-            "build/": ["app/templates/pages/*.hbs"]
+            "build/": ["src/templates/pages/*.hbs"]
         }
     }
 }
