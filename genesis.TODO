@@ -1,8 +1,2 @@
 Plugins:
- □ grunticon          (https://github.com/filamentgroup/grunticon)
- □ svgmin
  □ grunt-webfont      (https://github.com/sapegin/grunt-webfont)
-
-＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
-Archive:
-√ sass-globbing @done (11.03.14 10:07) @project(Plugins)
