@@ -46,15 +46,16 @@ module.exports = function(grunt) {
     // Deploy task, compressing the css and concatenating the js files
     grunt.registerTask('deploy', [
         'clean:build',
-        'processhtml',
         'sass:build',
         'copy:deploy',
         'copy:modernizr',
         'copy:jquery',
+        'processhtml',
         'assemble:build',
         'autoprefixer',
         'concat:dev',
         'concat:build',
+        'clean:temp',
         'jshint:build',
         'uglify',
         'todos'

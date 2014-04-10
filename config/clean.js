@@ -8,5 +8,10 @@ module.exports = {
         "src": [
             "./build"
         ]
+    },
+    "temp": {
+        "src": [
+            "./temp"
+        ]
     }
 }

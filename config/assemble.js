@@ -17,10 +17,15 @@ module.exports = {
     },
     "build": {
         "options": {
-            "assets": "build/assets"
+            "layout": "default.hbs",
+            "layoutdir": "temp/layouts",
+            "partials": [
+                "temp/pages/*.hbs",
+                "temp/parts/*.hbs"
+            ],
         },
         "files": {
-            "build/": ["src/templates/pages/*.hbs"]
+            "build/": ["temp/pages/*.hbs"]
         }
     }
 }

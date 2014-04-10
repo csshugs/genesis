@@ -8,12 +8,15 @@ module.exports = {
         "files": [
             {
                 "expand": true,
-                "cwd": "./src/templates/layouts",
-                "src": ["./**/*.*"],
-                "dest": "src/templates/layouts"
+                "cwd": "./temp/parts",
+                "src": ["_page-head.hbs"],
+                "dest": "./temp/parts"
             },
             {
-                "src/templates/parts/_page-head.hbs": "src/templates/parts/_page-head.hbs"
+                "expand": true,
+                "cwd": "./temp/layouts",
+                "src": ["./**/*.*"],
+                "dest": "./temp/layouts"
             }
         ]
     }

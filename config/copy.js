@@ -12,6 +12,12 @@ module.exports = {
                 "cwd": "./src/assets/fonts",
                 "src": ["./**/*.*"],
                 "dest": "build/assets/fonts"
+            },
+            {
+                "expand": true,
+                "cwd": "./src/templates",
+                "src": ["./**/*.*"],
+                "dest": "temp"
             }
         ]
     },
