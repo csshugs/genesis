@@ -50,13 +50,14 @@ module.exports = function(grunt) {
         'copy:deploy',
         'copy:modernizr',
         'copy:jquery',
+        'processhtml',
         'assemble:build',
         'autoprefixer',
         'concat:dev',
         'concat:build',
+        'clean:temp',
         'jshint:build',
         'uglify',
-        'processhtml',
         'todos'
     ]);
 
