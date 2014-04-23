@@ -4,7 +4,7 @@ module.exports = {
         "tasks": "scss"
     },
     "html": {
-        "files": ["src/templates/**/*.*"],
+        "files": ["src/templates/**/{.*,*,*/*}"],
         "tasks": "html"
     },
     "js": {
