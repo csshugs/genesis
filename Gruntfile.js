@@ -6,6 +6,7 @@ module.exports = function(grunt) {
         sprite: 'grunt-spritesmith'
     });
 
+
     var configs = require('load-grunt-configs')(grunt);
     grunt.initConfig(configs);
 

@@ -21,6 +21,14 @@ module.exports = {
             }
         ]
     },
+    "modernizr": {
+        "src": "./bower_components/modernizr/modernizr.js",
+        "dest": "build/assets/js/vendor/modernizr.js"
+    },
+    "jquery": {
+        "src": "./bower_components/jquery/jquery.min.js",
+        "dest": "build/assets/js/vendor/jquery.min.js"
+    },
     "js": {
         "files": [
             {
@@ -30,14 +38,6 @@ module.exports = {
                 "dest": "dist/assets/js"
             }
         ]
-    },
-    "modernizr": {
-        "src": "./bower_components/modernizr/modernizr.js",
-        "dest": "build/assets/js/vendor/modernizr.js"
-    },
-    "jquery": {
-        "src": "./bower_components/jquery/jquery.min.js",
-        "dest": "build/assets/js/vendor/jquery.min.js"
     },
     "img": {
         "files": [
