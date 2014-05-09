@@ -1,26 +1,35 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    STYLE.CSS
+    $FRAMEWORK-SETTINGS
+\*------------------------------------*/
+@import "../../../bower_components/henryCSS/settings";
+
+
+/*------------------------------------*\
+    $CUSTOM-SETTINGS AND VARS
 \*------------------------------------*/
 /**
- * Custom vars
+ * Overrides for framework variables
+ */
+@import "overrides";
+
+
+/**
+ * Custom variables
  */
 @import "vars";
 
 
 /**
- * Framework
+ * Object variables
  */
-@import "../../../bower_components/inuit.css/inuit";
+@import "objects";
 
 
-/**
- * Scut
- */
-@import "../../../bower_components/scut/dist/scut";
-
-
-
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+@import "../../../bower_components/henryCSS/henrycss";
 
 
 /*------------------------------------*\

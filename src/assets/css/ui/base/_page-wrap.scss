@@ -1,13 +1,15 @@
 /*------------------------------------*\
     $PAGE-WRAP
 \*------------------------------------*/
-/**
- * The main page-wrapper
- */
 .page-wrap{
-	max-width: $page-wrap-width;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: $base-spacing-unit;
-	padding-right: $base-spacing-unit;
+    max-width: $page-wrap-width -($spacing-unit*2);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+
+    @include media-query(portable){
+        padding-left: halve($spacing-unit);
+        padding-bottom: halve($spacing-unit);
+    };
 }

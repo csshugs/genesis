@@ -1,12 +1,25 @@
 {
   "name": "genesis",
-  "version": "1.2.1",
+  "version": "2.0.0",
+  "homepage": "https://github.com/csshugs/genesis",
+  "authors": [
+    "Dennis Heibült <dennis@csshugs.com>"
+  ],
+  "description": "A grunt.js, henryCSS and assemble-based frontend development environment",
+  "main": "Gruntfile.js",
+  "keywords": [
+    "grunt.js",
+    "henryCSS",
+    "automation",
+    "workflow",
+    "assemble",
+    "sass",
+    "livereload"
+  ],
+  "license": "Apache",
   "dependencies": {
-    "jquery": "git://github.com/components/jquery.git#~1.10.2",
-    "modernizr": "git://github.com/Modernizr/Modernizr.git#~2.7.1",
-    "inuit.css": "~5.0.0"
-  },
-  "devDependencies": {
-    "scut": "~0.8.0"
+    "modernizr": "~2.8.1",
+    "jquery": "1.10",
+    "henryCSS": "~0.2.3"
   }
 }
