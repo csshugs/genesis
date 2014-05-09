@@ -1,6 +1,9 @@
 /*------------------------------------*\
     $PAGE-WRAP
 \*------------------------------------*/
+/**
+ * The main page-wrapper
+ */
 .page-wrap{
     max-width: $page-wrap-width -($spacing-unit*2);
     margin-left: auto;

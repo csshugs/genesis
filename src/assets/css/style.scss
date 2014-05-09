@@ -2,6 +2,11 @@
 /*------------------------------------*\
     $FRAMEWORK-SETTINGS
 \*------------------------------------*/
+/**
+ * The framework settings must be imported
+ * before overrides, vars and objects because
+ * they are used in these
+ */
 @import "../../../bower_components/henryCSS/settings";
 
 
@@ -29,6 +34,9 @@
 /*------------------------------------*\
     $FRAMEWORK
 \*------------------------------------*/
+/**
+ * The main framework
+ */
 @import "../../../bower_components/henryCSS/henrycss";
 
 
