@@ -1,3 +1,5 @@
+###[Documentation](http://csshugs.github.io/genesis/)
+
 #Getting started
 
 ###Installation

@@ -19,6 +19,10 @@ module.exports = {
         "files": ["src/assets/img/css/sprites/src/{.*,*,*/*}"],
         "tasks": "copysprite"
     },
+    "fonts": {
+        "files": ["src/assets/fonts/{.*,*,*/*}"],
+        "tasks": "copy:fonts"
+    },
     "grunt": {
         "files": [
             'Gruntfile.js',
