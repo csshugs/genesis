@@ -3,29 +3,13 @@ module.exports = function(grunt) {
 
     require('time-grunt')(grunt);
     require('jit-grunt')(grunt, {
-        sprite: 'grunt-spritesmith',
-        notify: 'grunt-notify',
-        notify_hooks: 'grunt-notify'
+        sprite: 'grunt-spritesmith'
     });
+
 
     var configs = require('load-grunt-configs')(grunt);
     grunt.initConfig(configs);
 
-
-    // Initial dev task, cleans /dist, opens the site in the browser.
-    grunt.registerTask('init', [
-        'clean:dev',
-        'copy:js',
-        'concat:dev',
-        'copy:img',
-        'copy:fonts',
-        'assemble:dev',
-        'concurrent',
-        'jshint:dev',
-        'connect',
-        'open',
-        'watch'
-    ]);
 
     // Default dev task without open.
     grunt.registerTask('default', [
@@ -38,8 +22,6 @@ module.exports = function(grunt) {
         'concurrent',
         'jshint:dev',
         'connect',
-        'notify:server',
-        'notify_hooks',
         'watch'
     ]);
 

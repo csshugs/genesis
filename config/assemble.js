@@ -19,6 +19,7 @@ module.exports = {
         "options": {
             "layout": "default.hbs",
             "layoutdir": "temp/layouts",
+            "assets": "build/assets",
             "partials": [
                 "temp/pages/*.hbs",
                 "temp/parts/*.hbs"

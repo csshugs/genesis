@@ -1,42 +1,62 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    STYLE.CSS
+    $FRAMEWORK-SETTINGS
 \*------------------------------------*/
 /**
- * Custom vars
+ * The framework settings must be imported
+ * before overrides, vars and objects because
+ * they are used in these
+ */
+@import "../../../bower_components/henryCSS/settings";
+
+
+/*------------------------------------*\
+    $CUSTOM-SETTINGS AND VARS
+\*------------------------------------*/
+/**
+ * Overrides for framework variables
+ */
+@import "overrides";
+
+
+/**
+ * Custom variables
  */
 @import "vars";
 
 
 /**
- * Framework
+ * Object variables
  */
-@import "../../../bower_components/inuit.css/inuit";
+@import "objects";
 
 
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
 /**
- * Scut
+ * The main framework
  */
-@import "../../../bower_components/scut/dist/scut";
-
-
-
+@import "../../../bower_components/henryCSS/henrycss";
 
 
 /*------------------------------------*\
     $UI-CONTENTS
 \*------------------------------------*/
 /**
+ * TOOLS:
+ * Mixins............Custom SASS-mixins
+ *
  * BASE:
- * Mixins............Custom made SASS-mixins
- * Setup.............html, body overrides and basic styling for .page-wrap etc.
+ * Fonts.............Import your webfonts and icon fonts right here
+ * Page-Wrap.........The main page-wrapper
  * Sprites...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
- * Fonts.............Import your webfonts right here
- * Visibility........Visibility classes to show/hide elements depending on viewport-width
+ * Typography........Basic typographic settings
  *
  * LAYOUT:
  * Page-Head.........Page header container
  * Page-Content......Page content container
+ * Page-Subcontent...Main Sidebar of the page
  * Page-Foot.........Page footer container
  *
  * COMPONENTS:
@@ -44,7 +64,7 @@
  * Site-Nav..........Main navigation
  *
  * THEME:
- * Typography........Basic typography settings
+ * Buttons...........Custom button styling
  * Colors............Basic color classes
  *
  * PLUGINS:
@@ -53,6 +73,7 @@
  *
  * SHAME.............For hacks and quick fixes, which will surely be repaired some day
  */
+@import "ui/tools/*.*";
 @import "ui/base/*.*";
 @import "ui/layout/*.*";
 @import "ui/components/*.*";
