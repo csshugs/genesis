@@ -27,11 +27,14 @@
     $UI-CONTENTS
 \*------------------------------------*/
 /**
+ * TOOLS:
+ * Mixins............Custom SASS-mixins
+ *
  * BASE:
- * Mixins............Custom made SASS-mixins
- * Setup.............html, body overrides and basic styling for .page-wrap etc.
+ * Fonts.............Import your webfonts and icon fonts right here
+ * Page-Wrap.........The main page-wrapper
  * Sprites...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
- * Fonts.............Import your webfonts right here
+ * Typography........Basic typographic settings
  *
  * LAYOUT:
  * Page-Head.........Page header container
@@ -44,9 +47,8 @@
  * Site-Nav..........Main navigation
  *
  * THEME:
- * Typography........Basic typography settings
- * Colors............Basic color classes
  * Buttons...........Custom button styling
+ * Colors............Basic color classes
  *
  * PLUGINS:
  *
@@ -54,6 +56,7 @@
  *
  * SHAME.............For hacks and quick fixes, which will surely be repaired some day
  */
+@import "ui/tools/*.*";
 @import "ui/base/*.*";
 @import "ui/layout/*.*";
 @import "ui/components/*.*";

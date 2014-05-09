@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $SETUP
+    $PAGE-WRAP
 \*------------------------------------*/
 /**
  * The main page-wrapper
@@ -11,6 +11,3 @@
 	padding-left: $base-spacing-unit;
 	padding-right: $base-spacing-unit;
 }
-
-::selection         { background-color: $brand-color; color:#fff; }
-::-moz-selection    { background-color: $brand-color; color:#fff; }
