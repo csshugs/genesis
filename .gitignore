@@ -12,3 +12,4 @@ tmp/
 *.log
 .grunt
 *.sublime-workspace
+*.sublime-project
