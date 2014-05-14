@@ -16,6 +16,8 @@ $block-list-padding--large:             double($block-list-padding);
 
 $enable-block-list--small:              false;
 $enable-block-list--large:              false;
+$enable-block-list--responsive:         false;
+$block-list-collapse-at:                720px;
 
 
 /**
@@ -51,8 +53,12 @@ $enable-flag--rev:                      false;
 $enable-flag--flush:                    false;
 $enable-flag--top:                      false;
 $enable-flag--bottom:                   false;
-$enable-flag--responsive:               false;
-$flag-collapse-at:                      720px;
+$enable-flag--responsive--palm:         false;
+$enable-flag--responsive--portable:     false;
+$enable-flag--responsive--desk:         false;
+$flag--palm-collapse-at:                $palm-end;
+$flag--portable-collapse-at:            $desk-start;
+$flag--desk-collapse-at:                $desk-wide-start;
 
 
 /**
@@ -75,8 +81,6 @@ $enable-grid--bottom:                   false;
  */
 $icon-spacing--small:                   halve($spacing-unit);
 $icon-spacing--large:                   double($spacing-unit);
-
-$icon-vertical-alignment:               0.1em;
 
 $enable-icon--small:                    false;
 $enable-icon--large:                    false;
@@ -111,8 +115,12 @@ $enable-media--small:                   false;
 $enable-media--large:                   false;
 $enable-media--rev:                     false;
 $enable-media--flush:                   false;
-$enable-media--responsive:              false;
-$media-collapse-at:                     720px;
+$enable-media--responsive--palm:        false;
+$enable-media--responsive--portable:    false;
+$enable-media--responsive--desk:        false;
+$media--palm-collapse-at:               $palm-end;
+$media--portable-collapse-at:           $desk-start;
+$media--desk-collapse-at:               $desk-wide-start;
 
 
 /**
@@ -164,6 +172,8 @@ $ui-list-border-color:                  $base-ui-color;
 
 $enable-ui-list--small:                 false;
 $enable-ui-list--large:                 false;
+$enable-ui-list--responsive:            false;
+$ui-list-collapse-at:                   720px;
 
 
 /**
