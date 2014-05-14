@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/csshugs/genesis",
   "authors": [
     "Dennis Heibült <dennis@csshugs.com>"
@@ -10,6 +10,7 @@
   "keywords": [
     "grunt.js",
     "henryCSS",
+    "inuit",
     "automation",
     "workflow",
     "assemble",
