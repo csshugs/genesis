@@ -5,14 +5,14 @@
  * The main page-wrapper
  */
 .page-wrap{
-    max-width: $page-wrap-width -($spacing-unit*2);
+    max-width: $page-wrap-width -($inuit-base-spacing-unit*2);
     margin-left: auto;
     margin-right: auto;
-    padding-left: $spacing-unit;
-    padding-right: $spacing-unit;
+    padding-left: $inuit-base-spacing-unit;
+    padding-right: $inuit-base-spacing-unit;
 
     @include media-query(portable){
-        padding-left: halve($spacing-unit);
-        padding-bottom: halve($spacing-unit);
+        padding-left: halve($inuit-base-spacing-unit);
+        padding-bottom: halve($inuit-base-spacing-unit);
     };
 }

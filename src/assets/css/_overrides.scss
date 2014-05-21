@@ -10,28 +10,15 @@
     $BASE
 \*------------------------------------*/
 /**
- * Basic font stuff
+ * Base settings
  */
-$base-font-size:                20px;
-$base-line-height:              30px;
-$base-font-family:              'Lato', sans-serif;
+$inuit-base-font-size:                20px;
+$inuit-base-line-height:              30px;
+$inuit-base-text-color:               #333;
+$inuit-base-background-color:         #eee;
+$inuit-base-font-family:              'Lato', sans-serif;
 
 
-/**
- * Basic color settings
- */
-$base-text-color:               #333;
-$base-background-color:         #eee;
-$base-ui-color:                 #999;
-
-$brand-color:                   #8ee2ff;
-
-
-/**
- * Selection colors
- */
-$selection-background-color:    $brand-color;
-$selection-text-color:          #fff;
 
 
 /*------------------------------------*\
@@ -40,33 +27,12 @@ $selection-text-color:          #fff;
 /**
  * Headings
  */
-$giga-size:                     96px;
-$mega-size:                     72px;
-$kilo-size:                     48px;
-
-$heading-size-1:                36px;
-$heading-size-2:                30px;
-$heading-size-3:                24px;
-$heading-size-4:                20px;
-$heading-size-5:                16px;
-$heading-size-6:                14px;
-
-
-/**
- * Smallprint
- */
-$milli-size:                    12px;
-$micro-size:                    10px;
-
-
-/*------------------------------------*\
-    $GRID
-\*------------------------------------*/
-/**
- * Defines the number of columns
- * of your grid system
- */
-$columns:                       12;
+$inuit-heading-size-1:                36px;
+$inuit-heading-size-2:                30px;
+$inuit-heading-size-3:                24px;
+$inuit-heading-size-4:                20px;
+$inuit-heading-size-5:                16px;
+$inuit-heading-size-6:                14px;
 
 
 /*------------------------------------*\

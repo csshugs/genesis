@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
+/**
+ * Takes care of the calculation
+ * for the grid__item widths
+ */
+@function col($n) {
+    @return percentage( $n / $grid-columns );
+}
