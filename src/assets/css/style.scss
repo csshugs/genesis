@@ -1,84 +1,87 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    $FRAMEWORK-SETTINGS
+    $SETTINGS
 \*------------------------------------*/
-/**
- * The framework settings must be imported
- * before overrides, vars and objects because
- * they are used in these
- */
-@import "../../../bower_components/henryCSS/settings";
-
-
-/*------------------------------------*\
-    $CUSTOM-SETTINGS AND VARS
-\*------------------------------------*/
-/**
- * Overrides for framework variables
- */
 @import "overrides";
-
-
-/**
- * Custom variables
- */
+@import "../../../bower_components/inuit-defaults/_settings.defaults";
 @import "vars";
 
 
-/**
- * Object variables
- */
-@import "objects";
-
-
 /*------------------------------------*\
-    $FRAMEWORK
+    $TOOLS
 \*------------------------------------*/
-/**
- * The main framework
- */
-@import "../../../bower_components/henryCSS/henrycss";
-
-
-/*------------------------------------*\
-    $UI-CONTENTS
-\*------------------------------------*/
-/**
- * TOOLS:
- * Mixins............Custom SASS-mixins
- *
- * BASE:
- * Fonts.............Import your webfonts and icon fonts right here
- * Page-Wrap.........The main page-wrapper
- * Sprites...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
- * Typography........Basic typographic settings
- *
- * LAYOUT:
- * Page-Head.........Page header container
- * Page-Content......Page content container
- * Page-Subcontent...Main Sidebar of the page
- * Page-Foot.........Page footer container
- *
- * COMPONENTS:
- * Site-Logo.........The brand logo
- * Site-Nav..........Main navigation
- *
- * THEME:
- * Buttons...........Custom button styling
- * Colors............Basic color classes
- *
- * PLUGINS:
- *
- *
- *
- * SHAME.............For hacks and quick fixes, which will surely be repaired some day
- */
 @import "ui/tools/*.*";
+@import "../../../bower_components/inuit-functions/_tools.functions";
+@import "../../../bower_components/inuit-mixins/_tools.mixins";
+@import "ui/tools/aliases";
+
+
+/*------------------------------------*\
+    $GENERIC
+\*------------------------------------*/
+@import "../../../bower_components/inuit-box-sizing/_generic.box-sizing";
+@import "../../../bower_components/inuit-normalize/_generic.normalize";
+@import "../../../bower_components/inuit-reset/_generic.reset";
+@import "../../../bower_components/inuit-shared/_generic.shared";
+@import "../../../bower_components/inuit-clearfix/_generic.clearfix";
+
+
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+@import "../../../bower_components/inuit-page/_base.page";
+@import "../../../bower_components/inuit-headings/_base.headings";
+@import "../../../bower_components/inuit-lists/_base.lists";
+@import "../../../bower_components/inuit-images/_base.images";
 @import "ui/base/*.*";
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
 @import "ui/layout/*.*";
+
+
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
+// @import "objects";
+@import "../../../bower_components/inuit-layout/_objects.layout";
+@import "../../../bower_components/inuit-bare-list/_objects.bare-list";
+@import "../../../bower_components/inuit-block-list/_objects.block-list";
+@import "../../../bower_components/inuit-ui-list/_objects.ui-list";
+@import "../../../bower_components/inuit-media/_objects.media";
+@import "../../../bower_components/inuit-flag/_objects.flag";
+@import "../../../bower_components/inuit-box/_objects.box";
+@import "../../../bower_components/inuit-tabs/_objects.tabs";
+@import "../../../bower_components/inuit-buttons/_objects.buttons";
+@import "../../../bower_components/inuit-tables/_objects.tables";
+
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
 @import "ui/components/*.*";
+
+
+/*------------------------------------*\
+    $THEME
+\*------------------------------------*/
 @import "ui/theme/*.*";
+
+
+/*------------------------------------*\
+    $PLUGINS
+\*------------------------------------*/
 @import "ui/plugins/*.*";
+
+
+/*------------------------------------*\
+    $TRUMPS
+\*------------------------------------*/
+@import "../../../bower_components/inuit-widths/_trumps.widths";
+@import "../../../bower_components/inuit-spacing/_trumps.spacing";
+@import "ui/trumps/*.*";
 
 
 
