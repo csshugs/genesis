@@ -33,6 +33,13 @@
 @import "../../../bower_components/inuit-headings/_base.headings";
 @import "../../../bower_components/inuit-lists/_base.lists";
 @import "../../../bower_components/inuit-images/_base.images";
+@import "ui/base/*.*";
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+@import "ui/layout/*.*";
 
 
 /*------------------------------------*\
@@ -52,50 +59,29 @@
 
 
 /*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+@import "ui/components/*.*";
+
+
+/*------------------------------------*\
+    $THEME
+\*------------------------------------*/
+@import "ui/theme/*.*";
+
+
+/*------------------------------------*\
+    $PLUGINS
+\*------------------------------------*/
+@import "ui/plugins/*.*";
+
+
+/*------------------------------------*\
     $TRUMPS
 \*------------------------------------*/
 @import "../../../bower_components/inuit-widths/_trumps.widths";
 @import "../../../bower_components/inuit-spacing/_trumps.spacing";
-
-
-/*------------------------------------*\
-    $UI-CONTENTS
-\*------------------------------------*/
-/**
- * TOOLS:
- * Mixins............Custom SASS-mixins
- *
- * BASE:
- * Fonts.............Import your webfonts and icon fonts right here
- * Page-Wrap.........The main page-wrapper
- * Sprites...........This file is compiled automatically by grunt-spritesmith. DO NOT TOUCH IT!
- * Typography........Basic typographic settings
- *
- * LAYOUT:
- * Page-Head.........Page header container
- * Page-Content......Page content container
- * Page-Subcontent...Main Sidebar of the page
- * Page-Foot.........Page footer container
- *
- * COMPONENTS:
- * Site-Logo.........The brand logo
- * Site-Nav..........Main navigation
- *
- * THEME:
- * Buttons...........Custom button styling
- * Colors............Basic color classes
- *
- * PLUGINS:
- *
- *
- *
- * SHAME.............For hacks and quick fixes, which will surely be repaired some day
- */
-@import "ui/base/*.*";
-@import "ui/layout/*.*";
-@import "ui/components/*.*";
-@import "ui/theme/*.*";
-@import "ui/plugins/*.*";
+@import "ui/trumps/*.*";
 
 
 
