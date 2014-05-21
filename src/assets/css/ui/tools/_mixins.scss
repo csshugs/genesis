@@ -1,3 +1,60 @@
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
+/**
+ *
+ * Thought by Harry Roberts to be found in "_mixins.scss" in inuitcss:
+ * https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss
+ *
+ * Media query mixin
+ */
+$palm-end:              $lap-start - 1px;
+$lap-end:               $desk-start - 1px;
+
+@mixin media-query($media-query){
+
+    @if $media-query == palm{
+
+        @media only screen and (max-width:$palm-end) { @content; }
+
+    }
+
+    @if $media-query == lap{
+
+        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+
+    }
+
+    @if $media-query == lap-and-up{
+
+        @media only screen and (min-width:$lap-start) { @content; }
+
+    }
+
+    @if $media-query == portable{
+
+        @media only screen and (max-width:$lap-end) { @content; }
+
+    }
+
+    @if $media-query == desk{
+
+        @media only screen and (min-width:$desk-start) { @content; }
+
+    }
+
+    @if $media-query == desk-wide{
+
+        @media only screen and (min-width: $desk-wide-start) { @content; }
+
+    }
+
+}
+
+
+/**
+ * Assigning the calculated column width to the grid__item
+ */
+@mixin column($n) {
+    width: col($n);
+}

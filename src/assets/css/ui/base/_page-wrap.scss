@@ -13,6 +13,6 @@
 
     @include media-query(portable){
         padding-left: halve($spacing-unit);
-        padding-bottom: halve($spacing-unit);
+        padding-right: halve($spacing-unit);
     };
 }
