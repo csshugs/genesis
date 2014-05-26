@@ -10,6 +10,7 @@
   "keywords": [
     "grunt.js",
     "inuit.css",
+    "assemble",
     "automation",
     "workflow",
     "assemble",
@@ -33,7 +34,6 @@
     "inuit-layout": "~0.1.2",
     "inuit-bare-list": "~0.1.2",
     "inuit-tabs": "~0.1.1",
-    "inuit-buttons": "~0.3.1",
     "inuit-tables": "~0.1.1",
     "inuit-widths": "git@github.com:csshugs/trumps.widths.git#~0.2.0",
     "inuit-spacing": "~0.5.1",
@@ -44,6 +44,7 @@
     "inuit-flag": "git@github.com:csshugs/objects.flag.git#~0.2.3",
     "inuit-media": "git@github.com:csshugs/objects.media.git#~0.2.4",
     "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1",
-    "inuit-page": "git@github.com:csshugs/base.page.git#~0.1.2"
+    "inuit-page": "git@github.com:csshugs/base.page.git#~0.1.2",
+    "inuit-buttons": "git@github.com:csshugs/objects.buttons.git#~0.3.2"
   }
 }
