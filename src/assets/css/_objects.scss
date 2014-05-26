@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
+/**
+ * Redefine the objects' vars here
+ */
+
+
+/*------------------------------------*\
+    $BLOCK-LIST
+\*------------------------------------*/
+$inuit-block-list-padding:                  $inuit-base-spacing-unit;
+$inuit-block-list-padding--small:           halve($inuit-block-list-padding);
+$inuit-block-list-padding--large:           double($inuit-block-list-padding);
+
+$inuit-enable-block-list--small:            false;
+$inuit-enable-block-list--large:            false;
+$inuit-enable-block-list--responsive:       false;
+$inuit-block-list-collapse-at:              720px;
+
+
+/*------------------------------------*\
+    $BOX
+\*------------------------------------*/
+$inuit-box-padding:                         $inuit-base-spacing-unit;
+$inuit-box-padding--small:                  halve($inuit-box-padding);
+$inuit-box-padding--large:                  double($inuit-box-padding);
+
+$inuit-enable-box--small:                   false;
+$inuit-enable-box--large:                   false;
+$inuit-enable-box--responsive--palm:        false;
+$inuit-enable-box--responsive--portable:    false;
+$inuit-enable-box--responsive--desk:        false;
+$inuit-box--palm-collapse-at:               $palm-end;
+$inuit-box--portable-collapse-at:           $desk-start;
+$inuit-box--desk-collapse-at:               $desk-wide-start;
+
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+$inuit-btn-padding:                         halve($inuit-base-spacing-unit);
+$inuit-btn-padding--small:                  halve($inuit-btn-padding);
+$inuit-btn-padding--large:                  double($inuit-btn-padding);
+
+$inuit-btn-background:                      $brand-color;
+$inuit-btn-color:                           #fff;
+$inuit-btn-border-width:                    1px;
+$inuit-btn-border-style:                    solid;
+$inuit-btn-border-color:                    $inuit-btn-background;
+$inuit-btn-radius:                          0;
+
+$inuit-enable-btn--small:                   false;
+$inuit-enable-btn--large:                   false;
+$inuit-enable-btn--full:                    false;
+$inuit-enable-btn--pill:                    false;
+
+
+/*------------------------------------*\
+    $FLAG
+\*------------------------------------*/
+$inuit-flag-gutter:                         $inuit-base-spacing-unit;
+$inuit-flag-gutter--small:                  halve($inuit-flag-gutter);
+$inuit-flag-gutter--large:                  double($inuit-flag-gutter);
+
+$inuit-enable-flag--small:                  false;
+$inuit-enable-flag--large:                  false;
+$inuit-enable-flag--rev:                    false;
+$inuit-enable-flag--flush:                  false;
+$inuit-enable-flag--top:                    false;
+$inuit-enable-flag--bottom:                 false;
+$inuit-enable-flag--responsive--palm:       false;
+$inuit-enable-flag--responsive--portable:   false;
+$inuit-enable-flag--responsive--desk:       false;
+$inuit-flag--palm-collapse-at:              $palm-end;
+$inuit-flag--portable-collapse-at:          $desk-start;
+$inuit-flag--desk-collapse-at:              $desk-wide-start;
