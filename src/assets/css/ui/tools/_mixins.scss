@@ -58,3 +58,17 @@ $lap-end:               $desk-start - 1px;
 @mixin column($n) {
     width: col($n);
 }
+
+/**
+ * Assigning the calculated column width to pull
+ */
+@mixin pull($n) {
+    right: col($n);
+}
+
+/**
+ * Assigning the calculated column width to push
+ */
+@mixin push($n) {
+    left: col($n);
+}

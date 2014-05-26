@@ -43,6 +43,7 @@
     "inuit-tables": "~0.1.1",
     "inuit-widths": "git@github.com:csshugs/trumps.widths.git#~0.2.0",
     "inuit-spacing": "~0.5.1",
-    "inuit-box-sizing": "~0.1.1"
+    "inuit-box-sizing": "~0.1.1",
+    "inuit.css": "git@github.com:csshugs/inuit.css.git#~5.0.1"
   }
 }
