@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://github.com/csshugs/genesis",
   "authors": [
     "Dennis Heibült <dennis@csshugs.com>"
@@ -9,7 +9,7 @@
   "main": "Gruntfile.js",
   "keywords": [
     "grunt.js",
-    "inuit",
+    "inuit.css",
     "automation",
     "workflow",
     "assemble",
@@ -33,9 +33,6 @@
     "inuit-images": "~0.1.0",
     "inuit-layout": "~0.1.2",
     "inuit-bare-list": "~0.1.2",
-    "inuit-ui-list": "~0.2.0",
-    "inuit-media": "~0.2.3",
-    "inuit-flag": "~0.2.2",
     "inuit-tabs": "~0.1.1",
     "inuit-buttons": "~0.3.1",
     "inuit-tables": "~0.1.1",
@@ -44,6 +41,9 @@
     "inuit-box-sizing": "~0.1.1",
     "inuit.css": "git@github.com:csshugs/inuit.css.git#~5.0.1",
     "inuit-box": "git@github.com:csshugs/objects.box.git#~0.1.5",
-    "inuit-block-list": "git@github.com:csshugs/objects.block-list.git#~0.2.2"
+    "inuit-block-list": "git@github.com:csshugs/objects.block-list.git#~0.2.2",
+    "inuit-flag": "git@github.com:csshugs/objects.flag.git#~0.2.3",
+    "inuit-media": "git@github.com:csshugs/objects.media.git#~0.2.4",
+    "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1"
   }
 }

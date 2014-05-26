@@ -75,3 +75,105 @@ $inuit-enable-flag--responsive--desk:       false;
 $inuit-flag--palm-collapse-at:              $palm-end;
 $inuit-flag--portable-collapse-at:          $desk-start;
 $inuit-flag--desk-collapse-at:              $desk-wide-start;
+
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+$inuit-layout-gutter:                       $inuit-base-spacing-unit;
+$inuit-layout-gutter--small:                halve($inuit-layout-gutter);
+$inuit-layout-gutter--large:                double($inuit-layout-gutter);
+
+$inuit-enable-layout--small:                false;
+$inuit-enable-layout--large:                false;
+$inuit-enable-layout--flush:                false;
+$inuit-enable-layout--rev:                  false;
+$inuit-enable-layout--middle:               false;
+$inuit-enable-layout--bottom:               false;
+$inuit-enable-layout--right:                false;
+$inuit-enable-layout--center:               false;
+
+
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+$inuit-media-gutter:                        $inuit-base-spacing-unit;
+$inuit-media-gutter--small:                 halve($inuit-media-gutter);
+$inuit-media-gutter--large:                 double($inuit-media-gutter);
+
+$inuit-enable-media--small:                 false;
+$inuit-enable-media--large:                 false;
+$inuit-enable-media--rev:                   false;
+$inuit-enable-media--flush:                 false;
+$inuit-enable-media--responsive--palm:      false;
+$inuit-enable-media--responsive--portable:  false;
+$inuit-enable-media--responsive--desk:      false;
+$inuit-media--palm-collapse-at:             $palm-end;
+$inuit-media--portable-collapse-at:         $desk-start;
+$inuit-media--desk-collapse-at:             $desk-wide-start;
+
+
+/*------------------------------------*\
+    $SPACING
+\*------------------------------------*/
+$inuit-margin:                              $inuit-base-spacing-unit;
+$inuit-padding:                             $inuit-base-spacing-unit;
+
+$inuit-enable-margins:                      false;
+$inuit-enable-margins--tiny:                false;
+$inuit-enable-margins--small:               false;
+$inuit-enable-margins--large:               false;
+$inuit-enable-margins--huge:                false;
+
+$inuit-enable-margins--negative:            false;
+$inuit-enable-margins--negative-tiny:       false;
+$inuit-enable-margins--negative-small:      false;
+$inuit-enable-margins--negative-large:      false;
+$inuit-enable-margins--negative-huge:       false;
+
+$inuit-enable-margins--none:                false;
+
+$inuit-enable-paddings:                     false;
+$inuit-enable-paddings--tiny:               false;
+$inuit-enable-paddings--small:              false;
+$inuit-enable-paddings--large:              false;
+$inuit-enable-paddings--huge:               false;
+
+$inuit-enable-paddings--none:               false;
+
+
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+$inuit-table-padding--compact:              quarter($inuit-base-spacing-unit);
+$inuit-table-padding--cosy:                 halve($inuit-base-spacing-unit);
+$inuit-table-padding--comfy:                $inuit-base-spacing-unit;
+
+$inuit-table-border-width:                  1px;
+$inuit-table-border-style:                  solid;
+$inuit-table-border-color:                  $base-ui-color;
+
+$inuit-enable-table--fixed:                 false;
+$inuit-enable-table--compact:               false;
+$inuit-enable-table--cosy:                  false;
+$inuit-enable-table--comfy:                 false;
+$inuit-enable-table--cells:                 false;
+$inuit-enable-table--rows:                  false;
+$inuit-enable-table--columns:               false;
+
+
+/*------------------------------------*\
+    $UI-LIST
+\*------------------------------------*/
+$inuit-ui-list-padding:                     $inuit-base-spacing-unit;
+$inuit-ui-list-padding--small:              halve($inuit-ui-list-padding);
+$inuit-ui-list-padding--large:              double($inuit-ui-list-padding);
+
+$inuit-ui-list-border-width:                1px;
+$inuit-ui-list-border-style:                solid;
+$inuit-ui-list-border-color:                $base-ui-color;
+
+$inuit-enable-ui-list--small:               false;
+$inuit-enable-ui-list--large:               false;
+$inuit-enable-ui-list--responsive:          false;
+$inuit-ui-list-collapse-at:                 720px;
