@@ -27,7 +27,6 @@
     "inuit-reset": "~0.1.0",
     "inuit-shared": "~0.1.1",
     "inuit-clearfix": "~0.1.0",
-    "inuit-page": "~0.1.1",
     "inuit-headings": "~0.1.1",
     "inuit-lists": "~0.1.0",
     "inuit-images": "~0.1.0",
@@ -44,6 +43,7 @@
     "inuit-block-list": "git@github.com:csshugs/objects.block-list.git#~0.2.2",
     "inuit-flag": "git@github.com:csshugs/objects.flag.git#~0.2.3",
     "inuit-media": "git@github.com:csshugs/objects.media.git#~0.2.4",
-    "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1"
+    "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1",
+    "inuit-page": "git@github.com:csshugs/base.page.git#~0.1.2"
   }
 }
