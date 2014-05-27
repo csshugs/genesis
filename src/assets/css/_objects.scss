@@ -78,6 +78,18 @@ $inuit-flag--desk-collapse-at:              $desk-wide-start;
 
 
 /*------------------------------------*\
+    $ICON
+\*------------------------------------*/
+$icon-spacing:                              halve($inuit-base-spacing-unit);
+$icon-spacing--small:                       quarter($icon-spacing);
+$icon-spacing--large:                       $icon-spacing;
+
+$enable-icon--small:                        false;
+$enable-icon--large:                        false;
+$enable-icon--rev:                          false;
+
+
+/*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
 $inuit-layout-gutter:                       $inuit-base-spacing-unit;
