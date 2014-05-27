@@ -5,7 +5,7 @@
   "authors": [
     "Dennis Heibült <dennis@csshugs.com>"
   ],
-  "description": "A grunt.js, inuitcss and assemble-based frontend development environment",
+  "description": "A grunt.js, inuit.css and assemble-based frontend development environment",
   "main": "Gruntfile.js",
   "keywords": [
     "grunt.js",
@@ -20,6 +20,7 @@
   "license": "Apache",
   "dependencies": {
     "genesis-functions": "~0.1.0",
+    "genesis-helper": "~0.1.0",
     "genesis-icon": "~0.1.0",
     "genesis-mixins": "~0.1.0",
     "genesis-page-wrap": "~0.1.1",
@@ -50,7 +51,6 @@
     "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1",
     "inuit-widths": "git@github.com:csshugs/trumps.widths.git#~0.2.0",
     "jquery": "1.10",
-    "modernizr": "~2.8.1",
-    "genesis-helper": "~0.1.0"
+    "modernizr": "~2.8.1"
   }
 }
