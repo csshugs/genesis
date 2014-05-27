@@ -13,6 +13,7 @@
 @import "ui/tools/*.*";
 @import "../../../bower_components/genesis-functions/_tools.functions";
 @import "../../../bower_components/inuit-functions/_tools.functions";
+@import "../../../bower_components/genesis-mixins/_tools.mixins";
 @import "../../../bower_components/inuit-mixins/_tools.mixins";
 
 
@@ -24,8 +25,8 @@
 @import "../../../bower_components/inuit-reset/_generic.reset";
 @import "../../../bower_components/inuit-shared/_generic.shared";
 @import "../../../bower_components/inuit-clearfix/_generic.clearfix";
-@import "../../../bower_components/inuit.css/generic/pull";
-@import "../../../bower_components/inuit.css/generic/push";
+@import "../../../bower_components/genesis-pull/_generic.pull";
+@import "../../../bower_components/genesis-push/_generic.push";
 
 
 /*------------------------------------*\
