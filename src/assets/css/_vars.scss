@@ -17,42 +17,6 @@ $desk-start:                    1024px;
 $desk-wide-start:               1200px;
 
 
-/**
- * Turning on push produces a lot of output.
- * Only turn it on, if you absolutely need to!
- */
-$push:                          false;
-
-/**
- * Note: $push variable above must be
- * set to true before enabling these
- */
-$palm-push:                     false;
-$lap-push:                      false;
-$lap-and-up-push:               false;
-$portable-push:                 false;
-$desk-push:                     false;
-$desk-wide-push:                false;
-
-
-/**
- * Turning on pull produces a lot of output.
- * Only turn it on, if you absolutely need to!
- */
-$pull:                          false;
-
-/**
- * Note: $pull variable above must be
- * set to true before enabling these
- */
-$palm-pull:                     false;
-$lap-pull:                      false;
-$lap-and-up-pull:               false;
-$portable-pull:                 false;
-$desk-pull:                     false;
-$desk-wide-pull:                false;
-
-
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/
