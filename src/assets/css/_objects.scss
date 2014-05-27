@@ -114,6 +114,16 @@ $inuit-media--desk-collapse-at:             $desk-wide-start;
 
 
 /*------------------------------------*\
+    $PAGE-WRAP
+\*------------------------------------*/
+$page-wrap-padding:                         $inuit-base-spacing-unit;
+$page-wrap-width:                           1280px;
+
+$page-wrap--responsive:                     false;
+$page-wrap-collapse-at:                     720px;
+
+
+/*------------------------------------*\
     $SPACING
 \*------------------------------------*/
 $inuit-margin:                              $inuit-base-spacing-unit;
