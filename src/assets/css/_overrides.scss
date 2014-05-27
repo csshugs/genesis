@@ -22,7 +22,13 @@ $inuit-base-font-size:                  20px;
 $inuit-base-line-height:                30px;
 $inuit-base-text-color:                 #333;
 $inuit-base-background-color:           #eee;
-$inuit-base-font-family:                'Lato', sans-serif;
+
+
+/*------------------------------------*\
+    $SELECTION
+\*------------------------------------*/
+$inuit-selection-background-color:      $brand-color;
+$inuit-selection-text-color:            $inuit-base-text-color;
 
 
 /*------------------------------------*\
@@ -37,3 +43,51 @@ $inuit-heading-size-3:                  24px;
 $inuit-heading-size-4:                  20px;
 $inuit-heading-size-5:                  16px;
 $inuit-heading-size-6:                  14px;
+
+
+/*------------------------------------*\
+    $GRID-COLUMNS
+\*------------------------------------*/
+$grid-columns:                          12;
+
+
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Turning on push produces a lot of output.
+ * Only turn it on, if you absolutely need to!
+ */
+$push:                                  false;
+
+/**
+ * Note: $push variable above must be
+ * set to true before enabling these
+ */
+$palm-push:                             false;
+$lap-push:                              false;
+$lap-and-up-push:                       false;
+$portable-push:                         false;
+$desk-push:                             false;
+$desk-wide-push:                        false;
+
+
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+/**
+ * Turning on pull produces a lot of output.
+ * Only turn it on, if you absolutely need to!
+ */
+$pull:                                  false;
+
+/**
+ * Note: $pull variable above must be
+ * set to true before enabling these
+ */
+$palm-pull:                             false;
+$lap-pull:                              false;
+$lap-and-up-pull:                       false;
+$portable-pull:                         false;
+$desk-pull:                             false;
+$desk-wide-pull:                        false;
