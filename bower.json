@@ -46,7 +46,8 @@
     "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1",
     "inuit-page": "git@github.com:csshugs/base.page.git#~0.1.2",
     "inuit-buttons": "git@github.com:csshugs/objects.buttons.git#~0.3.2",
-    "genesis-page-wrap": "*",
-    "genesis-icon": "*"
+    "genesis-functions": "~0.1.0",
+    "genesis-icon": "~0.1.0",
+    "genesis-page-wrap": "~0.1.1"
   }
 }
