@@ -50,6 +50,7 @@
     "inuit-ui-list": "git@github.com:csshugs/objects.ui-list.git#~0.2.1",
     "inuit-widths": "git@github.com:csshugs/trumps.widths.git#~0.2.0",
     "jquery": "1.10",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "genesis-helper": "~0.1.0"
   }
 }
