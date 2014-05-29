@@ -22,6 +22,7 @@ $inuit-base-font-size:                  20px;
 $inuit-base-line-height:                30px;
 $inuit-base-text-color:                 #333;
 $inuit-base-background-color:           #eee;
+$inuit-base-font-family:                'Lato', sans-serif;
 
 
 /*------------------------------------*\
@@ -43,6 +44,14 @@ $inuit-heading-size-3:                  24px;
 $inuit-heading-size-4:                  20px;
 $inuit-heading-size-5:                  16px;
 $inuit-heading-size-6:                  14px;
+
+
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+$inuit-lap-start:                       481px;
+$inuit-desk-start:                      1024px;
+$inuit-desk-wide-start:                 1200px;
 
 
 /*------------------------------------*\

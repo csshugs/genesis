@@ -31,9 +31,9 @@ $inuit-enable-box--large:                   false;
 $inuit-enable-box--responsive--palm:        false;
 $inuit-enable-box--responsive--portable:    false;
 $inuit-enable-box--responsive--desk:        false;
-$inuit-box--palm-collapse-at:               $palm-end;
-$inuit-box--portable-collapse-at:           $desk-start;
-$inuit-box--desk-collapse-at:               $desk-wide-start;
+$inuit-box--palm-collapse-at:               $inuit-palm-end;
+$inuit-box--portable-collapse-at:           $inuit-desk-start;
+$inuit-box--desk-collapse-at:               $inuit-desk-wide-start;
 
 
 /*------------------------------------*\
@@ -72,9 +72,9 @@ $inuit-enable-flag--bottom:                 false;
 $inuit-enable-flag--responsive--palm:       false;
 $inuit-enable-flag--responsive--portable:   false;
 $inuit-enable-flag--responsive--desk:       false;
-$inuit-flag--palm-collapse-at:              $palm-end;
-$inuit-flag--portable-collapse-at:          $desk-start;
-$inuit-flag--desk-collapse-at:              $desk-wide-start;
+$inuit-flag--palm-collapse-at:              $inuit-palm-end;
+$inuit-flag--portable-collapse-at:          $inuit-desk-start;
+$inuit-flag--desk-collapse-at:              $inuit-desk-wide-start;
 
 
 /*------------------------------------*\
@@ -120,9 +120,9 @@ $inuit-enable-media--flush:                 false;
 $inuit-enable-media--responsive--palm:      false;
 $inuit-enable-media--responsive--portable:  false;
 $inuit-enable-media--responsive--desk:      false;
-$inuit-media--palm-collapse-at:             $palm-end;
-$inuit-media--portable-collapse-at:         $desk-start;
-$inuit-media--desk-collapse-at:             $desk-wide-start;
+$inuit-media--palm-collapse-at:             $inuit-palm-end;
+$inuit-media--portable-collapse-at:         $inuit-desk-start;
+$inuit-media--desk-collapse-at:             $inuit-desk-wide-start;
 
 
 /*------------------------------------*\
