@@ -7,7 +7,20 @@
 
 
 /*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+$base-font-family:              'Lato', sans-serif;
+
+
+/*------------------------------------*\
     $COLORS
 \*------------------------------------*/
 $brand-color:                   #8ee2ff;
 $base-ui-color:                 #333;
+
+
+/*------------------------------------*\
+    $SELECTION
+\*------------------------------------*/
+$selection-background-color:    $brand-color;
+$selection-text-color:          $base-ui-color;
