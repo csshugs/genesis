@@ -1,6 +1,6 @@
 module.exports = {
     "name": "genesis",
-    "version": "1.2.1",
+    "version": "4.1.0",
     "devDependencies": {
         "grunt": "~0.4.2",
         "grunt-contrib-sass": "~0.6.0",
