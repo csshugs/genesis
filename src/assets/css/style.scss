@@ -13,30 +13,32 @@
  *
  */
 
-
-/*------------------------------------*\
-    $SETTINGS
-\*------------------------------------*/
-@import "vars";
-@import "overrides";
+// /*------------------------------------*\
+//     #SETTINGS
+// \*------------------------------------*/
+@import "ui/settings/*.*";
 @import "../../../bower_components/inuit-defaults/_settings.defaults";
 @import "../../../bower_components/inuit-responsive-settings/_settings.responsive";
 
 
-/*------------------------------------*\
-    $TOOLS
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #TOOLS
+// \*------------------------------------*/
 @import "ui/tools/*.*";
-@import "../../../bower_components/genesis-functions/_tools.functions";
 @import "../../../bower_components/inuit-functions/_tools.functions";
-@import "../../../bower_components/genesis-mixins/_tools.mixins";
 @import "../../../bower_components/inuit-mixins/_tools.mixins";
 @import "../../../bower_components/inuit-responsive-tools/_tools.responsive";
 
 
-/*------------------------------------*\
-    $GENERIC
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #GENERIC
+// \*------------------------------------*/
 @import "../../../bower_components/inuit-box-sizing/_generic.box-sizing";
 @import "../../../bower_components/inuit-normalize/_generic.normalize";
 @import "../../../bower_components/inuit-reset/_generic.reset";
@@ -44,9 +46,12 @@
 @import "../../../bower_components/inuit-clearfix/_trumps.clearfix";
 
 
-/*------------------------------------*\
-    $BASE
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #BASE
+// \*------------------------------------*/
 @import "../../../bower_components/inuit-page/_base.page";
 @import "../../../bower_components/inuit-headings/_base.headings";
 @import "../../../bower_components/inuit-paragraphs/_base.paragraphs";
@@ -55,58 +60,79 @@
 @import "ui/base/*.*";
 
 
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #LAYOUT
+// \*------------------------------------*/
 @import "ui/layout/*.*";
 
 
-/*------------------------------------*\
-    $OBJECTS
-\*------------------------------------*/
-@import "objects";
+
+
+
+// /*------------------------------------*\
+//     #OBJECTS
+// \*------------------------------------*/
 @import "../../../bower_components/genesis-icon/_objects.icon";
 @import "../../../bower_components/genesis-page-wrap/_objects.page-wrap";
+@import "../../../bower_components/inuit-box/_objects.box";
+@import "../../../bower_components/inuit-buttons/_objects.buttons";
+@import "../../../bower_components/inuit-flag/_objects.flag";
 @import "../../../bower_components/inuit-layout/_objects.layout";
 @import "../../../bower_components/inuit-list-bare/_objects.list-bare";
 @import "../../../bower_components/inuit-list-block/_objects.list-block";
-@import "../../../bower_components/inuit-list-ui/_objects.list-ui";
 @import "../../../bower_components/inuit-list-inline/_objects.list-inline";
+@import "../../../bower_components/inuit-list-ui/_objects.list-ui";
 @import "../../../bower_components/inuit-media/_objects.media";
-@import "../../../bower_components/inuit-flag/_objects.flag";
-@import "../../../bower_components/inuit-box/_objects.box";
-@import "../../../bower_components/inuit-tabs/_objects.tabs";
-@import "../../../bower_components/inuit-buttons/_objects.buttons";
 @import "../../../bower_components/inuit-tables/_objects.tables";
+@import "../../../bower_components/inuit-tabs/_objects.tabs";
 @import "ui/objects/*.*";
 
 
-/*------------------------------------*\
-    $COMPONENTS
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #COMPONENTS
+// \*------------------------------------*/
 @import "ui/components/*.*";
 
 
-/*------------------------------------*\
-    $THEME
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #THEME
+// \*------------------------------------*/
 @import "ui/theme/*.*";
 
 
-/*------------------------------------*\
-    $PLUGINS
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #PLUGINS
+// \*------------------------------------*/
 @import "ui/plugins/*.*";
 
 
-/*------------------------------------*\
-    $TRUMPS
-\*------------------------------------*/
+
+
+
+// /*------------------------------------*\
+//     #TRUMPS
+// \*------------------------------------*/
 @import "../../../bower_components/inuit-widths/_trumps.widths";
-@import "../../../bower_components/genesis-responsive-widths/_trumps.responsive-widths";
+@import "../../../bower_components/inuit-widths-responsive/_trumps.widths-responsive";
 @import "../../../bower_components/inuit-spacing/_trumps.spacing";
+@import "../../../bower_components/inuit-spacing-responsive/_trumps.spacing-responsive";
+@import "../../../bower_components/inuit-print/_trumps.print";
 @import "../../../bower_components/genesis-helper/_trumps.helper";
 @import "ui/trumps/*.*";
+
+
 
 
 
