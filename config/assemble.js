@@ -26,7 +26,7 @@ module.exports = {
             ],
         },
         "files": {
-            "build/": ["temp/pages/*.hbs"]
+            "./": ["temp/pages/*.hbs"]
         }
     }
 }
