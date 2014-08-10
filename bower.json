@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "homepage": "https://github.com/csshugs/genesis",
   "authors": [
     "Dennis Heibült <dennis@csshugs.com>"
@@ -20,8 +20,9 @@
   "license": "Apache",
   "dependencies": {
     "genesis-helper": "~0.1.1",
-    "genesis-icon": "~0.1.3",
-    "genesis-page-wrap": "~0.1.3",
+    "genesis-icon": "~0.1.4",
+    "genesis-page-wrap": "~0.1.5",
+    "genesis-text-input": "~0.1.1",
     "inuit-box": "~0.4.2",
     "inuit-box-sizing": "~0.2.0",
     "inuit-buttons": "~0.4.1",
