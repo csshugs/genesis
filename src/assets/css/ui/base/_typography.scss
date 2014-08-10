@@ -4,7 +4,7 @@
 a{
     color: $brand-color;
     text-decoration: none;
-    border-bottom: 1px solid $brand-color;
+    border-bottom: 0 solid $brand-color;
     transition: 300ms;
 
     &:hover{
