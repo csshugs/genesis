@@ -4,6 +4,7 @@
 
 // Assign the $base-font-family.
 html{
+    @extend %weight--300;
     font-family: $base-font-family;
 }
 

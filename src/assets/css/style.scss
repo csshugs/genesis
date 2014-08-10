@@ -127,6 +127,8 @@
 // \*------------------------------------*/
 @import "../../../bower_components/inuit-widths/_trumps.widths";
 @import "../../../bower_components/inuit-widths-responsive/_trumps.widths-responsive";
+
+$inuit-enable-paddings--small:  true;
 @import "../../../bower_components/inuit-spacing/_trumps.spacing";
 @import "../../../bower_components/inuit-spacing-responsive/_trumps.spacing-responsive";
 @import "../../../bower_components/inuit-print/_trumps.print";

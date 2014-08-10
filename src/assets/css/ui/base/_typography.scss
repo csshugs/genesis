@@ -1,3 +1,15 @@
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
+a{
+    color: $brand-color;
+    text-decoration: none;
+    border-bottom: 1px solid $brand-color;
+    transition: 300ms;
+
+    &:hover{
+        color: $inuit-base-text-color;
+        border-bottom-width: 4px;
+        border-bottom-color: $inuit-base-text-color;
+    }
+}

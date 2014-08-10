@@ -4,5 +4,6 @@
 
 // The header of the page.
 .page-head{
-
+    @extend .pv-;
+    background-color: $base-ui-color;
 }

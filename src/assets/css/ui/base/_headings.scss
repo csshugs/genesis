@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+h1,
+.alpha,
+%alpha{
+    @extend %weight--100;
+}
+
+h2,
+.beta,
+%beta{
+    @extend %weight--300;
+    color: $brand-color;
+}
