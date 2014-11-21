@@ -1,14 +1,25 @@
 module.exports = function(grunt) {
 
 
-    require('time-grunt')(grunt);
-    require('jit-grunt')(grunt, {
-        sprite: 'grunt-spritesmith'
+
+    var globalConfig = {
+        dev: 'dist',
+        build: 'build',
+        cms: 'cms'
+    };
+
+
+
+    require('load-grunt-config')(grunt, {
+        jitGrunt: {
+            staticMappings: {
+                sprite: 'grunt-spritesmith'
+            }
+        },
+        config: {
+            globalConfig: globalConfig
+        }
     });
-
-
-    var configs = require('load-grunt-configs')(grunt);
-    grunt.initConfig(configs);
 
 
     // Default dev task without open.
@@ -17,6 +28,8 @@ module.exports = function(grunt) {
         'copy:js',
         'concat:dev',
         'copy:img',
+        'copy:img_cms',
+        'copy:fonts_cms',
         'copy:fonts',
         'assemble:dev',
         'concurrent',
@@ -29,7 +42,10 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', [
         'clean:build',
         'sass:build',
+        'copy:css_compressed',
         'copy:deploy',
+        'copy:img_cms',
+        'copy:fonts_cms',
         'copy:modernizr',
         'copy:jquery',
         'processhtml',
@@ -38,13 +54,12 @@ module.exports = function(grunt) {
         'concat:dev',
         'concat:build',
         'clean:temp',
-        'jshint:build',
-        'uglify',
-        'todos'
+        'uglify'
     ]);
 
     grunt.registerTask('scss', [
-        'sass:dev'
+        'sass:dev',
+        'copy:css_expanded'
     ]);
 
     grunt.registerTask('html', [
@@ -58,7 +73,13 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('img', [
-        'copy:img'
+        'copy:img',
+        'copy:img_cms'
+    ]);
+
+    grunt.registerTask('fonts', [
+        'copy:fonts',
+        'copy:fonts_cms'
     ]);
 
     grunt.registerTask('copysprite', [

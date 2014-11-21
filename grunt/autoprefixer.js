@@ -7,6 +7,6 @@ module.exports = {
                 "ie 9"
             ]
         },
-        "src": "build/assets/css/style.css"
+        "src": "<%= globalConfig.build %>/assets/css/style.css"
     }
 }
