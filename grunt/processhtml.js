@@ -1,22 +1,17 @@
 module.exports = {
-    "options": {
-        "data": {
-            "message": "Hello world!"
-        }
-    },
     "build": {
         "files": [
             {
                 "expand": true,
-                "cwd": "./temp/parts",
+                "cwd": "temp/parts",
                 "src": ["_page-head.hbs"],
-                "dest": "./temp/parts"
+                "dest": "temp/parts"
             },
             {
                 "expand": true,
-                "cwd": "./temp/layouts",
+                "cwd": "temp/layouts",
                 "src": ["./**/*.*"],
-                "dest": "./temp/layouts"
+                "dest": "temp/layouts"
             }
         ]
     }

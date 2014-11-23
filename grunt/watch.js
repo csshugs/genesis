@@ -21,23 +21,17 @@ module.exports = {
     },
     "fonts": {
         "files": ["src/assets/fonts/{.*,*,*/*}"],
-        "tasks": "copy:fonts"
-    },
-    "grunt": {
-        "files": [
-            'Gruntfile.js',
-            'config/*.js'
-        ]
+        "tasks": "fonts"
     },
     "livereload": {
         "options": {
             "livereload": true
         },
         "files": [
-            "dist/**/*.html",
-            "dist/assets/css/{,*/}*.css",
-            "dist/assets/js/{,*/}*.*",
-            "dist/assets/img/{,*/}*.*"
+            "<%= globalConfig.dev %>/**/*.html",
+            "<%= globalConfig.dev %>/assets/css/{,*/}*.css",
+            "<%= globalConfig.dev %>/assets/js/{,*/}*.*",
+            "<%= globalConfig.dev %>/assets/img/{,*/}*.*"
         ]
     }
 }

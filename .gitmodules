@@ -1,0 +1,3 @@
+[submodule "src/assets/css"]
+	path = src/assets/css
+	url = https://github.com/csshugs/css-scaffold.git

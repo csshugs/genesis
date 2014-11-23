@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "4.1.1",
+  "version": "4.2.0",
   "devDependencies": {
     "assemble": "~0.4.35",
     "grunt": "~0.4.2",
@@ -16,11 +16,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-processhtml": "~0.3.0",
     "grunt-spritesmith": "~1.21.1",
-    "grunt-todos": "~0.2.0",
     "jit-grunt": "~0.2.3",
-    "load-grunt-configs": "~0.3.2"
-  },
-  "dependencies": {
-    "time-grunt": "~0.2.8"
+    "load-grunt-config": "~0.16.0"
   }
 }

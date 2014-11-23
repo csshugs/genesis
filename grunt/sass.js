@@ -10,7 +10,7 @@ module.exports = {
             "sourcemap": true
         },
         "files": {
-            "dist/assets/css/style.css": "src/assets/css/style.scss"
+            "<%= globalConfig.dev %>/assets/css/style.css": "src/assets/css/style.scss"
         }
     },
     "build": {
@@ -18,7 +18,7 @@ module.exports = {
             "style": "compressed"
         },
         "files": {
-            "build/assets/css/style.css": "src/assets/css/style.scss"
+            "<%= globalConfig.build %>/assets/css/style.css": "src/assets/css/style.scss"
         }
     }
 }
