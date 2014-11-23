@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "Initializing Genesis"
+
+git submodule init              && \
+git submodule update            && \
+rm -rf .git/                    && \
+rm -rf .gitmodules              && \
+rm -rf src/assets/css/.git
+
+echo "Genesis has been successfully initialized"
+
+rm init
