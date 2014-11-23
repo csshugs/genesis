@@ -6,8 +6,7 @@ Cd into your projects folder and run:
 
 - `npm install`
 - `bower install`
-- `git submodule init`
-- `git submodule update`
+- `init`
 
 Then genesis is set up for your project and you can start running `grunt` to execute the default grunt-task which starts a local server, watches its files for changes and reloads the page if there were changes detected.
 
