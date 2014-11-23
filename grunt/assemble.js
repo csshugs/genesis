@@ -3,7 +3,7 @@ module.exports = {
         "flatten": true,
         "layout": "default.hbs",
         "layoutdir": "src/templates/layouts",
-        "assets": "dist/assets",
+        "assets": "<%= globalConfig.dev %>/assets",
         "partials": [
             "src/templates/pages/*.hbs",
             "src/templates/parts/*.hbs"
@@ -12,21 +12,21 @@ module.exports = {
     },
     "dev": {
         "files": {
-            "dist/": ["src/templates/pages/*.hbs"]
+            "<%= globalConfig.dev %>/": ["src/templates/pages/*.hbs"]
         }
     },
     "build": {
         "options": {
             "layout": "default.hbs",
             "layoutdir": "temp/layouts",
-            "assets": "build/assets",
+            "assets": "<%= globalConfig.build %>/assets",
             "partials": [
                 "temp/pages/*.hbs",
                 "temp/parts/*.hbs"
             ],
         },
         "files": {
-            "build/": ["temp/pages/*.hbs"]
+            "<%= globalConfig.build %>/": ["temp/pages/*.hbs"]
         }
     }
 }

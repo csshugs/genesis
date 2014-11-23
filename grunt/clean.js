@@ -1,17 +1,17 @@
 module.exports = {
     "dev": {
         "src": [
-            "./dist"
+            "<%= globalConfig.dev %>"
         ]
     },
     "build": {
         "src": [
-            "./build"
+            "<%= globalConfig.build %>"
         ]
     },
     "temp": {
         "src": [
-            "./temp"
+            "temp"
         ]
     }
 }
