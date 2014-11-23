@@ -23,12 +23,6 @@ module.exports = {
         "files": ["src/assets/fonts/{.*,*,*/*}"],
         "tasks": "fonts"
     },
-    "grunt": {
-        "files": [
-            'Gruntfile.js',
-            'config/*.js'
-        ]
-    },
     "livereload": {
         "options": {
             "livereload": true

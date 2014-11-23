@@ -3,9 +3,10 @@ module.exports = function(grunt) {
 
 
     var globalConfig = {
-        dev: 'dist',
-        build: 'build',
-        cms: 'cms'
+        // Assets destinaion paths
+        dev: 'dist', // Path to dev (`grunt`)
+        build: 'build', // Path to build (`grunt deploy`)
+        cms: 'cms' // Path to cms (e.g. '../wordpress/wp-content/themes/twentyfifteen')
     };
 
 
@@ -27,6 +28,7 @@ module.exports = function(grunt) {
         'clean:dev',
         'copy:js',
         'concat:dev',
+        'concat:cms',
         'copy:img',
         'copy:img_cms',
         'copy:fonts_cms',
@@ -69,6 +71,7 @@ module.exports = function(grunt) {
     grunt.registerTask('js', [
         'copy:js',
         'concat:dev',
+        'concat:cms',
         'jshint:dev'
     ]);
 
@@ -84,7 +87,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('copysprite', [
         'sprite',
-        'copy:img'
+        'copy:img',
+        'copy:img_cms'
     ]);
 
 
