@@ -4,8 +4,8 @@ module.exports = function(grunt) {
 
     var globalConfig = {
         // Assets destinaion paths
-        dev: 'dist', // Path to dev (`grunt`)
-        build: 'build', // Path to build (`grunt deploy`)
+        dev: 'dist', // Path to dev output (`grunt`)
+        build: 'build', // Path to build output (`grunt deploy`)
         cms: 'cms' // Path to cms (e.g. '../wordpress/wp-content/themes/twentyfifteen')
     };
 
