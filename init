@@ -4,6 +4,9 @@ echo "Initializing Genesis"
 
 git submodule init              && \
 git submodule update            && \
+cd src/assets/css/              && \
+git pull origin master          && \
+cd ../../../                    && \
 rm -rf .git/                    && \
 rm -rf .gitmodules              && \
 rm -rf src/assets/css/.git
