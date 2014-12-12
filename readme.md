@@ -24,7 +24,8 @@ At the top of the Gruntfile you'll find three variables indicating the destinati
 
 ###Prerequisities
 
-- Since we are using [sass-globbing](https://github.com/chriseppstein/sass-globbing), you'll need to install it.
+- Install [sass-globbing](https://github.com/chriseppstein/sass-globbing) version 1.1.0: `gem install sass-globbing -v 1.1.0`
+- Thus you'll need ruby [version 1.9.3](http://rubyinstaller.org/downloads/).
 - For `grunt sprite` you must have [PhantomJS](http://phantomjs.org/) installed.
 
 ###Troubleshooting
