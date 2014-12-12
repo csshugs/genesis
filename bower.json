@@ -5,16 +5,17 @@
   "authors": [
     "Dennis Heibült <dennis@csshugs.com>"
   ],
-  "description": "A grunt.js, inuit.css and assemble-based frontend development environment",
+  "description": "A grunt.js, inuitcss and assemble-based frontend development environment",
   "main": "Gruntfile.js",
   "keywords": [
     "grunt.js",
-    "inuit.css",
-    "assemble",
     "automation",
+    "livereload",
     "workflow",
-    "sass",
-    "livereload"
+    "assemble",
+    "inuitcss",
+    "oocss",
+    "sass"
   ],
   "license": "Apache",
   "dependencies": {
