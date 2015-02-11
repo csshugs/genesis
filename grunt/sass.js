@@ -6,8 +6,7 @@ module.exports = {
     "dev": {
         "options": {
             "style": "expanded",
-            "lineNumbers": true,
-            "sourcemap": true
+            "lineNumbers": true
         },
         "files": {
             "<%= globalConfig.dev %>/assets/css/style.css": "src/assets/css/style.scss"
@@ -15,7 +14,8 @@ module.exports = {
     },
     "build": {
         "options": {
-            "style": "compressed"
+            "style": "compressed",
+            "sourcemap": "none"
         },
         "files": {
             "<%= globalConfig.build %>/assets/css/style.css": "src/assets/css/style.scss"

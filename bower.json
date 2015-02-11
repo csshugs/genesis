@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "4.3.1",
+  "version": "4.4.0",
   "homepage": "https://github.com/csshugs/genesis",
   "authors": [
     "Dennis Heibült <dennis@csshugs.com>"
@@ -29,7 +29,7 @@
     "inuit-float": "0.1.0",
     "inuit-font-weight": "0.1.1",
     "inuit-functions": "0.2.0",
-    "inuit-headings": "0.3.1",
+    "inuit-headings": "0.3.0",
     "inuit-headings-trumps": "0.1.2",
     "inuit-hide": "0.1.0",
     "inuit-icon": "0.1.3",
@@ -62,7 +62,7 @@
     "inuit-shared": "0.1.5",
     "inuit-spacing": "0.6.2",
     "inuit-spacing-responsive": "0.0.4",
-    "inuit-split": "0.1.0",
+    "inuit-split": "0.1.1",
     "inuit-tables": "0.2.1",
     "inuit-tabs": "0.2.1",
     "inuit-text-align": "0.1.1",
