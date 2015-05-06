@@ -15,10 +15,6 @@ module.exports = {
         "files": ["src/assets/img/**/{.*,*,*/*}"],
         "tasks": "img"
     },
-    "sprite": {
-        "files": ["src/assets/img/css/sprites/src/{.*,*,*/*}"],
-        "tasks": "copysprite"
-    },
     "fonts": {
         "files": ["src/assets/fonts/{.*,*,*/*}"],
         "tasks": "fonts"
