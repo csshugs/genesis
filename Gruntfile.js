@@ -35,6 +35,7 @@ module.exports = function(grunt) {
         'copy:fonts',
         'assemble:dev',
         'concurrent',
+        'autoprefixer',
         'jshint:dev',
         'connect',
         'watch'

@@ -1,7 +1,7 @@
 module.exports = {
     "scss": {
         "files": ["src/assets/css/**/{.*,*,*/*}"],
-        "tasks": "scss"
+        "tasks": ["scss", "autoprefixer"]
     },
     "html": {
         "files": ["src/templates/**/{.*,*,*/*}"],

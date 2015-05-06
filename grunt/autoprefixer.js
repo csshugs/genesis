@@ -7,6 +7,9 @@ module.exports = {
             "ie 10"
         ]
     },
+    "dev": {
+        "src": "<%= globalConfig.dist %>/assets/css/style.css"
+    },
     "deploy": {
         "src": "<%= globalConfig.build %>/assets/css/style.css"
     },
