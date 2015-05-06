@@ -1,6 +1,6 @@
 module.exports = {
     "name": "genesis",
-    "version": "4.4.1",
+    "version": "4.5.0",
     "devDependencies": {
         "assemble": "0.4.41",
         "grunt": "0.4.5",
