@@ -1,7 +1,7 @@
 module.exports = {
     "scss": {
         "files": ["src/assets/css/**/{.*,*,*/*}"],
-        "tasks": "scss"
+        "tasks": ["scss", "autoprefixer"]
     },
     "html": {
         "files": ["src/templates/**/{.*,*,*/*}"],
@@ -14,10 +14,6 @@ module.exports = {
     "img": {
         "files": ["src/assets/img/**/{.*,*,*/*}"],
         "tasks": "img"
-    },
-    "sprite": {
-        "files": ["src/assets/img/css/sprites/src/{.*,*,*/*}"],
-        "tasks": "copysprite"
     },
     "fonts": {
         "files": ["src/assets/fonts/{.*,*,*/*}"],

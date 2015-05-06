@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     require('load-grunt-config')(grunt, {
         jitGrunt: {
             staticMappings: {
-                sprite: 'grunt-spritesmith'
+
             }
         },
         config: {
@@ -83,12 +83,6 @@ module.exports = function(grunt) {
     grunt.registerTask('fonts', [
         'copy:fonts',
         'copy:fonts_cms'
-    ]);
-
-    grunt.registerTask('copysprite', [
-        'sprite',
-        'copy:img',
-        'copy:img_cms'
     ]);
 
 
