@@ -1,24 +1,25 @@
 module.exports = {
-    "options": {
-        "require": "sass-globbing",
-        "loadPath": "bower_components"
+    options: {
+        includePaths: [
+            'bower_components/'
+        ],
+        sourcemap: false
     },
-    "dev": {
-        "options": {
-            "style": "expanded",
-            "lineNumbers": true
+    dev: {
+        options: {
+            outputStyle: 'nested',
+            sourceComments: true
         },
-        "files": {
-            "<%= globalConfig.dev %>/assets/css/style.css": "src/assets/css/style.scss"
+        files: {
+            '<%= globalConfig.dev.stylesheet %>': '<%= globalConfig.source.stylesheet %>'
         }
     },
-    "build": {
-        "options": {
-            "style": "compressed",
-            "sourcemap": "none"
+    build: {
+        options: {
+            outputStyle: 'compressed'
         },
-        "files": {
-            "<%= globalConfig.build %>/assets/css/style.css": "src/assets/css/style.scss"
+        files: {
+            '<%= globalConfig.build.stylesheet %>': '<%= globalConfig.source.stylesheet %>'
         }
     }
-}
+};

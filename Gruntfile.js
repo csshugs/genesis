@@ -3,20 +3,56 @@ module.exports = function(grunt) {
 
 
     var globalConfig = {
-        // Assets destinaion paths
-        dev: 'dist', // Path to dev output (`grunt`)
-        build: 'build', // Path to build output (`grunt deploy`)
-        cms: 'cms' // Path to cms (e.g. '../wordpress/wp-content/themes/twentyfifteen')
+
+        // Reference the source paths.
+        source: {
+            source: 'src',
+            templates: 'src/templates',
+            css: 'src/assets/css',
+            stylesheet: 'src/assets/css/style.scss',
+            js: 'src/assets/js',
+            fonts: 'src/assets/fonts',
+            img: 'src/assets/img'
+        },
+
+        // The dev destination directory.
+        dev: {
+            dev: 'dist',
+            css: 'dist/assets/css',
+            stylesheet: 'dist/assets/css/style.css',
+            js: 'dist/assets/js',
+            fonts: 'dist/assets/fonts',
+            img: 'dist/assets/img'
+        },
+
+        // The build destination directory.
+        build: {
+            build: 'build',
+            css: 'build/assets/css',
+            stylesheet: 'build/assets/css/style.css',
+            js: 'build/assets/js',
+            fonts: 'build/assets/fonts',
+            img: 'build/assets/img'
+        },
+
+        // Adjust these values to the assets destination paths of your cms
+        cms: {
+            css: 'cms/css',
+            stylesheet: 'cms/css/style.css',
+            js: 'cms/js',
+            fonts: 'cms/fonts'
+        }
+
     };
 
 
 
-    require('load-grunt-config')(grunt, {
-        jitGrunt: {
-            staticMappings: {
+    require('time-grunt')(grunt);
 
-            }
-        },
+
+
+    require('load-grunt-config')(grunt, {
+        jitGrunt: {},
         config: {
             globalConfig: globalConfig
         }
@@ -25,64 +61,51 @@ module.exports = function(grunt) {
 
     // Default dev task without open.
     grunt.registerTask('default', [
-        'clean:dev',
-        'copy:js',
-        'concat:dev',
-        'concat:cms',
-        'copy:img',
-        'copy:img_cms',
-        'copy:fonts_cms',
-        'copy:fonts',
-        'assemble:dev',
+        'clean',
+        'bowerInject',
+        'jsVendor',
+        'copy:imgDev',
+        'copy:imgBuild',
+        'copy:fontsDev',
+        'copy:fontsBuild',
+        'copy:fontsCms',
+        'copy:jsDev',
+        'copy:jsBuild',
+        'copy:jsCms',
+        'sass_globbing',
         'concurrent',
-        'jshint:dev',
-        'connect',
+        'copy:cssCms',
+        'autoprefixer',
+        'assemble'
+    ]);
+
+    // Pattern Lab dev task.
+    grunt.registerTask('dev', [
+        'default',
+        'connect:server',
         'watch'
     ]);
 
-    // Deploy task, compressing the css and concatenating the js files
-    grunt.registerTask('deploy', [
-        'clean:build',
-        'sass:build',
-        'copy:css_compressed',
-        'copy:deploy',
-        'copy:img_cms',
-        'copy:fonts_cms',
-        'copy:modernizr',
-        'copy:jquery',
-        'processhtml',
-        'assemble:build',
-        'autoprefixer',
-        'concat:dev',
-        'concat:build',
-        'clean:temp',
-        'uglify'
+    // BorwserSync task.
+    grunt.registerTask('sync', [
+        'default',
+        'browserSync',
+        'watch'
     ]);
 
-    grunt.registerTask('scss', [
-        'sass:dev',
-        'copy:css_expanded'
+
+
+    // Bower components injection.
+    grunt.registerTask('bowerInject', [
+        'clean:jsVendor',
+        // 'bowercopy',
+        // 'injector'
     ]);
 
-    grunt.registerTask('html', [
-        'assemble:dev'
-    ]);
-
-    grunt.registerTask('js', [
-        'copy:js',
-        'concat:dev',
-        'concat:cms',
-        'jshint:dev'
-    ]);
-
-    grunt.registerTask('img', [
-        'copy:img',
-        'copy:img_cms'
-    ]);
-
-    grunt.registerTask('fonts', [
-        'copy:fonts',
-        'copy:fonts_cms'
+    // Uglify and concat vendor files.
+    grunt.registerTask('jsVendor', [
+        'concat:jsVendor',
+        'uglify:jsVendor'
     ]);
 
 

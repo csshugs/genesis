@@ -4,32 +4,23 @@
 
 Cd into your projects folder and run:
 
-- `npm install`
-- `bower install`
-- `init`
+```
+$ npm install
+```
 
-Then genesis is set up for your project and you can start running `grunt` to execute the default grunt-task which starts a local server, watches its files for changes and reloads the page if there were changes detected.
+```
+$ bower install
+```
 
-The entire development code is stored in the **src** directory. When grunt detects changes of this code, it is copied into the **dist** directory where the compiled html/css/js lies, which is used for displaying the site in the browser. This code shall not be touched.
+```
+$ init
+```
 
-###Tasks
+Then genesis is set up for your project and you can run:
+```
+$ grunt dev
+```
 
-There are two grunt tasks available:
-- `grunt` for development. It watches your files for changes and reloads the site automatically.
-- `grunt deploy` compiles compressed css, autoprefixes appropriate css3 porperties, concatenates all js files together and throws it all into the **build** folder.
+and go to: [localhost:8000](http://localhost:8000/).
 
-###Destination variables
-
-At the top of the Gruntfile you'll find three variables indicating the destination paths for the compiled assets. The most important one is probably `cms`. Let's assume that you are on a WordPress project and your active theme is 'twentyfifteen'. Your cms variable will then look as follows: `'../wordpress/wp-content/themes/twentyfifteen'`.
-
-###Prerequisities
-
-- Install [sass-globbing](https://github.com/chriseppstein/sass-globbing) version 1.1.0: `gem install sass-globbing -v 1.1.0`
-- Thus you'll need ruby [version 1.9.3](http://rubyinstaller.org/downloads/).
-- For `grunt sprite` you must have [PhantomJS](http://phantomjs.org/) installed.
-
-###Troubleshooting
-
-####fatal error: spawn ENOENT
-
-make sure, you have **phantomJS** installed, and that you installed the grunt-spritesmith plugin via `npm install grunt-spritesmith --save-dev`.
+The entire development code is stored in the `/src` directory. When grunt detects changes of this code, it is copied into the `/dist` directory where the compiled html/css/js lies, which is used for displaying the site in the browser. This code shall not be touched.

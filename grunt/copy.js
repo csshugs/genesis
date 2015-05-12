@@ -1,102 +1,92 @@
 module.exports = {
-    "deploy": {
-        "files": [
+    imgDev: {
+        files: [
             {
-                "expand": true,
-                "cwd": "src/assets/img",
-                "src": ["./**/*.*"],
-                "dest": "<%= globalConfig.build %>/assets/img"
-            },
-            {
-                "expand": true,
-                "cwd": "src/assets/fonts",
-                "src": ["./**/*.*"],
-                "dest": "<%= globalConfig.build %>/assets/fonts"
-            },
-            {
-                "expand": true,
-                "cwd": "src/templates",
-                "src": ["./**/*.*"],
-                "dest": "temp"
+                expand: true,
+                cwd: '<%= globalConfig.source.img %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.dev.img %>/'
             }
         ]
     },
-    "modernizr": {
-        "src": "bower_components/modernizr/modernizr.js",
-        "dest": "<%= globalConfig.build %>/assets/js/vendor/modernizr.js"
-    },
-    "jquery": {
-        "src": "bower_components/jquery/jquery.min.js",
-        "dest": "<%= globalConfig.build %>/assets/js/vendor/jquery.min.js"
-    },
-    "css_expanded": {
-        "files": [
+    imgBuild: {
+        files: [
             {
-                "expand": true,
-                "cwd": "<%= globalConfig.dev %>/assets/css",
-                "src": ["*.css"],
-                "dest": "<%= globalConfig.cms %>/css"
+                expand: true,
+                cwd: '<%= globalConfig.source.img %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.build.img %>/'
             }
         ]
     },
-    "css_compressed": {
-        "files": [
+    fontsDev: {
+        files: [
             {
-                "expand": true,
-                "cwd": "<%= globalConfig.build %>/assets/css",
-                "src": ["*.css"],
-                "dest": "<%= globalConfig.cms %>/css"
+                expand: true,
+                cwd: '<%= globalConfig.source.fonts %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.dev.fonts %>/'
             }
         ]
     },
-    "js": {
-        "files": [
+    fontsBuild: {
+        files: [
             {
-                "expand": true,
-                "cwd": "src/assets/js",
-                "src": ["*.*"],
-                "dest": "<%= globalConfig.dev %>/assets/js"
+                expand: true,
+                cwd: '<%= globalConfig.source.fonts %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.build.fonts %>/'
             }
         ]
     },
-    "img": {
-        "files": [
+    fontsCms: {
+        files: [
             {
-                "expand": true,
-                "cwd": "src/assets/img",
-                "src": ["./**/*.*"],
-                "dest": "<%= globalConfig.dev %>/assets/img"
+                expand: true,
+                cwd: '<%= globalConfig.source.fonts %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.cms.fonts %>/'
             }
         ]
     },
-    "img_cms": {
-        "files": [
+    jsDev: {
+        files: [
             {
-                "expand": true,
-                "cwd": "src/assets/img",
-                "src": ["./**/*.*"],
-                "dest": "<%= globalConfig.cms %>/img"
+                expand: true,
+                cwd: '<%= globalConfig.source.js %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.dev.js %>/'
             }
         ]
     },
-    "fonts": {
-        "files": [
+    jsBuild: {
+        files: [
             {
-                "expand": true,
-                "cwd": "src/assets/fonts",
-                "src": ["./**/*.*"],
-                "dest": "<%= globalConfig.dev %>/assets/fonts"
+                expand: true,
+                cwd: '<%= globalConfig.source.js %>/',
+                src: ['./**/*.*'],
+                dest: '<%= globalConfig.build.js %>/'
             }
         ]
     },
-    "fonts_cms": {
-        "files": [
+    jsCms: {
+        files: [
             {
-                "expand": true,
-                "cwd": "src/assets/fonts",
-                "src": ["./**/*.*"],
-                "dest": "<%= globalConfig.cms %>/fonts"
+                expand: true,
+                cwd: '<%= globalConfig.source.js %>/',
+                src: ['*.js'],
+                dest: '<%= globalConfig.cms.js %>/'
+            }
+        ]
+    },
+    cssCms: {
+        files: [
+            {
+                expand: true,
+                cwd: '<%= globalConfig.build.css %>/',
+                src: ['*.css'],
+                dest: '<%= globalConfig.cms.css %>/'
             }
         ]
     }
-}
+};
