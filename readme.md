@@ -13,7 +13,7 @@ $ bower install
 ```
 
 ```
-$ init
+$ sh init
 ```
 
 Then genesis is set up for your project and you can run:
