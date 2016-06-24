@@ -1,6 +1,6 @@
 {
   "name": "genesis",
-  "version": "4.6.1",
+  "version": "4.7.0",
   "devDependencies": {
     "assemble": "~0.4.42",
     "grunt": "~0.4.5",
