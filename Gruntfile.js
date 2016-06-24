@@ -72,7 +72,6 @@ module.exports = function(grunt) {
         'copy:jsDev',
         'copy:jsBuild',
         'copy:jsCms',
-        'sass_globbing',
         'concurrent',
         'copy:cssCms',
         'autoprefixer',
