@@ -1,0 +1,8 @@
+// /*------------------------------------*\
+//     $ALIASES
+// \*------------------------------------*/
+
+// Strip the "inuit" prefix.
+@mixin font-size($args...) {
+    @include inuit-font-size($args...);
+}
