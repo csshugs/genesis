@@ -2,18 +2,10 @@
 
 ###Installation
 
-Cd into your projects folder and run:
+Cd into the root of this project and run:
 
 ```
 $ npm install
-```
-
-```
-$ bower install
-```
-
-```
-$ sh init
 ```
 
 Then genesis is set up for your project and you can run:

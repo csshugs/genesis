@@ -8,8 +8,5 @@ module.exports = {
     },
     build: {
         src: '<%= globalConfig.build.stylesheet %>'
-    },
-    cms: {
-        src: '<%= globalConfig.cms.stylesheet %>'
     }
 };

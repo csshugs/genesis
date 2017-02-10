@@ -8,10 +8,5 @@ module.exports = {
         src: [
             '<%= globalConfig.build.build %>'
         ]
-    },
-    jsVendor: {
-        src: [
-            '<%= globalConfig.source.js %>/vendor/'
-        ]
     }
 }

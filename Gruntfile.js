@@ -33,14 +33,6 @@ module.exports = function(grunt) {
             js: 'build/assets/js',
             fonts: 'build/assets/fonts',
             img: 'build/assets/img'
-        },
-
-        // Adjust these values to the assets destination paths of your cms
-        cms: {
-            css: 'cms/css',
-            stylesheet: 'cms/css/style.css',
-            js: 'cms/js',
-            fonts: 'cms/fonts'
         }
 
     };
@@ -59,53 +51,28 @@ module.exports = function(grunt) {
     });
 
 
+
     // Default dev task without open.
     grunt.registerTask('default', [
         'clean',
-        'bowerInject',
-        'jsVendor',
         'copy:imgDev',
         'copy:imgBuild',
         'copy:fontsDev',
         'copy:fontsBuild',
-        'copy:fontsCms',
         'copy:jsDev',
         'copy:jsBuild',
-        'copy:jsCms',
         'concurrent',
-        'copy:cssCms',
         'autoprefixer',
         'assemble'
     ]);
 
-    // Pattern Lab dev task.
+    // Dev task.
     grunt.registerTask('dev', [
         'default',
-        'connect:server',
+        'connect',
         'watch'
     ]);
 
-    // BorwserSync task.
-    grunt.registerTask('sync', [
-        'default',
-        'browserSync',
-        'watch'
-    ]);
-
-
-
-    // Bower components injection.
-    grunt.registerTask('bowerInject', [
-        'clean:jsVendor',
-        'bowercopy',
-        'injector'
-    ]);
-
-    // Uglify and concat vendor files.
-    grunt.registerTask('jsVendor', [
-        'concat:jsVendor',
-        'uglify:jsVendor'
-    ]);
 
 
 };

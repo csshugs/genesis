@@ -1,7 +1,7 @@
 module.exports = {
     scss: {
         files: ['<%= globalConfig.source.css %>/**/{.*,*,*/*}'],
-        tasks: ['sass', 'copy:cssCms']
+        tasks: ['sass']
     },
     html: {
         files: ['<%= globalConfig.source.templates %>/**/{.*,*,*/*}'],
@@ -9,7 +9,7 @@ module.exports = {
     },
     js: {
         files: ['<%= globalConfig.source.js %>/**/{.*,*,*/*}'],
-        tasks: ['copy:jsDev', 'copy:jsCms']
+        tasks: ['copy:jsDev']
     },
     img: {
         files: ['<%= globalConfig.source.img %>/**/{.*,*,*/*}'],
@@ -17,7 +17,7 @@ module.exports = {
     },
     fonts: {
         files: ['<%= globalConfig.source.fonts %>/**/{.*,*,*/*}'],
-        tasks: ['copy:fontsDev', 'copy:fontsCms']
+        tasks: ['copy:fontsDev']
     },
     livereload: {
         options: {
