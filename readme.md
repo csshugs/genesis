@@ -1,6 +1,6 @@
-##Getting started
+## Getting started
 
-###Installation
+### Installation
 
 Cd into the root of this project and run:
 
